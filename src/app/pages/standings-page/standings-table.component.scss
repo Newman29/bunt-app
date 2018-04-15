@@ -1,0 +1,13 @@
+@import '../../shared/styles/variables';
+
+// Right align stats for a better viewing experience
+mat-cell, mat-header-cell {
+  justify-content: flex-end;
+}
+
+mat-cell.negative {
+  color: $status-danger;
+}
+mat-cell.positive {
+  color: $status-success;
+}

@@ -1,0 +1,51 @@
+@import '../../shared/styles/variables';
+
+$toolbar-height-lg: 64px;
+$toolbar-height-sm: 56px;
+
+// Accounts for top and bottom toobar heights
+@mixin padding-with-toolbars($toolbar-height, $padding) {
+  padding: calc(#{$padding} + #{$toolbar-height}) $padding;
+}
+mat-sidenav-container {
+  position: absolute;
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+mat-sidenav {
+  width: 280px;
+  padding: 0 $default-padding;
+  background-color: #FFFFFF;
+}
+
+.content-container {
+  background-color: $grey-bg;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 0 $default-padding__thin;
+}
+
+.mat-drawer-backdrop {
+  background-color: rgba(0,0,0,.22);
+}
+
+@media screen and (min-width: 600px) {
+  mat-sidenav {
+    @include padding-with-toolbars($toolbar-height-lg, $default-padding);
+  }
+  .content-container {
+    @include padding-with-toolbars($toolbar-height-lg, $default-padding__thin);
+  }
+
+}
+@media screen and (max-width: 599px) {
+  mat-sidenav {
+    @include padding-with-toolbars($toolbar-height-sm, $default-padding);
+  }
+  .content-container {
+    @include padding-with-toolbars($toolbar-height-sm, $default-padding__thin);
+  }
+}

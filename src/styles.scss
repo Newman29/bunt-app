@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|IBM+Plex+Serif:300,500,700');
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import './app/shared/styles/variables';
+
+/* Base font size for application*/
+html {
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  font-family: 'IBM Plex Serif', serif;
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.441em;
+}
+
+h2 {font-size: 1.953em;}
+
+h3 {font-size: 1.563em;}
+
+h4 {font-size: 1.25em;}
+
+small, .font_small {font-size: 0.8em;}

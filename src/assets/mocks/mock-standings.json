@@ -1,0 +1,42 @@
+[
+  {
+    "rank": 1,
+    "wins": 10,
+    "losses": 0,
+    "ties": 0,
+    "runsScored": 80,
+    "runsAllowed": 34
+  },
+  {
+    "rank": 2,
+    "wins": 6,
+    "losses": 4,
+    "ties": 0,
+    "runsScored": 52,
+    "runsAllowed": 40
+  },
+  {
+    "rank": 3,
+    "wins": 4,
+    "losses": 6,
+    "ties": 0,
+    "runsScored": 66,
+    "runsAllowed": 82
+  },
+  {
+    "rank": 4,
+    "wins": 2,
+    "losses": 8,
+    "ties": 0,
+    "runsScored": 44,
+    "runsAllowed": 76
+  },
+  {
+    "rank": 5,
+    "wins": 1,
+    "losses": 9,
+    "ties": 0,
+    "runsScored": 32,
+    "runsAllowed": 108
+  }
+]

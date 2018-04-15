@@ -1,0 +1,36 @@
+<mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="rank">
+    <mat-header-cell *matHeaderCellDef>Rank</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.rank}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="wins">
+    <mat-header-cell *matHeaderCellDef>W</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.wins}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="losses">
+    <mat-header-cell *matHeaderCellDef>L</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.losses}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="ties">
+    <mat-header-cell *matHeaderCellDef>T</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.ties}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="pct">
+    <mat-header-cell *matHeaderCellDef>PCT</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element | pct}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="runsScored">
+    <mat-header-cell *matHeaderCellDef>RS</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.runsScored}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="runsAllowed">
+    <mat-header-cell *matHeaderCellDef>RA</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.runsAllowed}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="runDifferential">
+    <mat-header-cell *matHeaderCellDef>DIFF</mat-header-cell>
+      <mat-cell *matCellDef="let element" [class.negative]="(element | diff) < 0" [class.positive]="(element | diff) > 0">{{element | diff}}</mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

@@ -6,7 +6,7 @@
     "bunt": {
       "root": "",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "bunt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -30,7 +30,10 @@
             ],
             "styles": [
               {
-                "input": "src/styles.css"
+                "input": "src/styles.scss"
+              },
+              {
+                "input": "./node_modules/normalize.css/normalize.css"
               }
             ],
             "scripts": []
@@ -49,7 +52,7 @@
               "extractCss": true,
               "namedChunks": false,
               "aot": true,
-              "extractLicenses": true,
+              "extractLicen ses": true,
               "vendorChunk": false,
               "buildOptimizer": true
             }
@@ -81,7 +84,7 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               {
-                "input": "styles.css"
+                "input": "styles.scss"
               }
             ],
             "scripts": [],

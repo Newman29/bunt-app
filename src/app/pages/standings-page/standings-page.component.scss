@@ -1,0 +1,6 @@
+@import '../pages';
+@import '../../shared/styles/variables';
+
+mat-card:not(:last-child) {
+  margin-bottom: $default-padding__thin;
+}
