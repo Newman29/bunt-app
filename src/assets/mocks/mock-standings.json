@@ -1,5 +1,8 @@
 [
   {
+    "teamId": 1001,
+    "teamName": "Electric Blue",
+    "teamSymbol": "BLU",
     "rank": 1,
     "wins": 10,
     "losses": 0,
@@ -8,7 +11,10 @@
     "runsAllowed": 34
   },
   {
+    "teamId": 1001,
+    "teamName": "Lightsaber Green",
     "rank": 2,
+    "teamSymbol": "GRN",
     "wins": 6,
     "losses": 4,
     "ties": 0,
@@ -16,14 +22,20 @@
     "runsAllowed": 40
   },
   {
+    "teamId": 1001,
+    "teamName": "Canary Yellow",
+    "teamSymbol": "YLW",
     "rank": 3,
     "wins": 4,
     "losses": 6,
     "ties": 0,
-    "runsScored": 66,
+    "runsScored": 82,
     "runsAllowed": 82
   },
   {
+    "teamId": 1001,
+    "teamName": "Cheese Puff Gold",
+    "teamSymbol": "GLD",
     "rank": 4,
     "wins": 2,
     "losses": 8,
@@ -32,6 +44,9 @@
     "runsAllowed": 76
   },
   {
+    "teamId": 1001,
+    "teamName": "Hot Pink",
+    "teamSymbol": "PNK",
     "rank": 5,
     "wins": 1,
     "losses": 9,

@@ -1,7 +1,6 @@
-<h1 class="page__title">Standings</h1>
 <mat-card *ngFor="let name of leagueNames" class="mat-elevation-z0">
     <mat-card-title>{{name}}</mat-card-title>
     <mat-card-content>
-      <bunt-standings-table [standingsData]="standings"></bunt-standings-table>
+      <bunt-standings-table [standingsData]="tableData"></bunt-standings-table>
     </mat-card-content>
 </mat-card>

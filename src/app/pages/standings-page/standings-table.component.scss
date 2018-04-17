@@ -1,8 +1,11 @@
 @import '../../shared/styles/variables';
 
 // Right align stats for a better viewing experience
-mat-cell, mat-header-cell {
+mat-cell.right, mat-header-cell.right {
   justify-content: flex-end;
+}
+mat-cell.left, mat-header-cell.left {
+  justify-content: flex-start;
 }
 
 mat-cell.negative {

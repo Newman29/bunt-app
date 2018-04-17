@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'bunt-header',
@@ -7,10 +8,23 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() menuClicked: EventEmitter<any> = new EventEmitter();
+  routeTitle = '';
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
+    this.router.events.subscribe(evt => {
+      if (evt instanceof NavigationEnd) {
+        if (this.route.snapshot.firstChild.data.title) {
+          this.routeTitle = this.route.snapshot.firstChild.data.title;
+        } else {
+          this.routeTitle = '';
+        }
+      }
+    });
   }
 
   toggleMenu() {

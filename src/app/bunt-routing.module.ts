@@ -8,9 +8,27 @@ import { RostersPageComponent } from './pages/rosters-page/rosters-page.componen
 
 const routes: Routes = [
   { path: '', redirectTo: '/standings', pathMatch: 'full' },
-  { path: 'standings', component: StandingsPageComponent },
-  { path: 'rosters', component: RostersPageComponent },
-  { path: 'schedule', component: SchedulePageComponent }
+  {
+    path: 'standings',
+    component: StandingsPageComponent,
+    data: {
+      title: 'Standings'
+    }
+  },
+  {
+    path: 'rosters',
+    component: RostersPageComponent,
+    data: {
+      title: 'Rosters'
+    }
+  },
+  {
+    path: 'schedule',
+    component: SchedulePageComponent,
+    data: {
+      title: 'Schedule'
+    }
+  }
 ];
 
 @NgModule({
