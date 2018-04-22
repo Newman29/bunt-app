@@ -4,3 +4,9 @@
 mat-card:not(:last-child) {
   margin-bottom: $default-padding__thin;
 }
+
+.standings-card {
+  &__content {
+    overflow-x: auto;
+  }
+}

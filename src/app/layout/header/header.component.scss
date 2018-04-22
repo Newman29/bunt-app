@@ -4,7 +4,7 @@
   position: absolute;
   color: #FFFFFF;
   box-shadow: 0 5px 15px 0 rgba(0,0,0,.08);
-  background-color: $bunt-teal;
+  @include cardboard-texture($vintage-blue);
   top: 0;
   z-index: 2;
 
@@ -14,6 +14,9 @@
   }
 
   &__page-title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    color: #FFFFFF;
     display: flex;   
     justify-content: center;
     width: 100%;

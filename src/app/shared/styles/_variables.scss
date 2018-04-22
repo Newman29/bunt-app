@@ -1,5 +1,7 @@
 // Colors
 $grey-bg: #E4E4E4;
+$vintage-yellow: rgba(241,216,162,1);
+$vintage-blue: rgba(81,125,164,1);
 $bunt-teal: #0DB196;
 $status-danger: #BF1029;
 $status-success: #15A84B;
@@ -11,3 +13,9 @@ $type-color: #333333;
 $default-padding__thin: 8px;
 $default-padding: 16px;
 $default-padding__thick: 24px;
+
+// Mixins
+@mixin cardboard-texture($color) {
+  background-color: $color;
+  background-image: url(../../../assets/cardboard.png);
+} 

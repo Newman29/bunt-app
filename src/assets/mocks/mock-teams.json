@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Electric Blue",
+    "nickname": "Aquaholics",
+    "short": "EBLU",
+    "hex": "#7DF9FF"
+  },
+  {
+    "name": "Gold",
+    "nickname": "Ice Gold Beer",
+    "short": "GLD",
+    "hex": "#FFDF00"
+  },
+  {
+    "name": "Dark Red",
+    "nickname": "Redrum",
+    "short": "DRED",
+    "hex": "#8B0000"
+  }
+]

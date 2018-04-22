@@ -5,12 +5,12 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ScheduleService {
-  url = '/assets/mocks/mock-schedule.json';
+export class TeamsListService {
+  url = '/assets/mocks/mock-teams.json';
 
   constructor(private http: HttpClient) { }
 
-  getSchedule(): Observable<any> {
+  getTeams(): Observable<any> {
     return this.http.get(this.url);
   }
 }

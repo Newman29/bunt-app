@@ -1,0 +1,6 @@
+@import '../../shared/styles/variables';
+
+bunt-scheduled-game-card:not(:last-child) {
+  display: block;
+  padding-bottom: $default-padding__thin;
+}

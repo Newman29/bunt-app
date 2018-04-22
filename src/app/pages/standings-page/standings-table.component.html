@@ -4,35 +4,35 @@
     <mat-cell class="left" *matCellDef="let element">{{element.teamSymbol}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="rank">
-    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header>Rank</mat-header-cell>
+    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header [arrowPosition]="'before'">Rank</mat-header-cell>
     <mat-cell class="right" *matCellDef="let element">{{element.rank}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="wins">
-    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header>W</mat-header-cell>
+    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header [arrowPosition]="'before'">W</mat-header-cell>
     <mat-cell class="right" *matCellDef="let element">{{element.wins}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="losses">
-    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header>L</mat-header-cell>
+    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header [arrowPosition]="'before'">L</mat-header-cell>
     <mat-cell class="right" *matCellDef="let element">{{element.losses}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="ties">
-    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header>T</mat-header-cell>
+    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header [arrowPosition]="'before'">T</mat-header-cell>
     <mat-cell class="right" *matCellDef="let element">{{element.ties}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="pct">
-    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header>PCT</mat-header-cell>
+    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header [arrowPosition]="'before'">PCT</mat-header-cell>
     <mat-cell class="right" *matCellDef="let element">{{element | pct}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="runsScored">
-    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header>RS</mat-header-cell>
+    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header [arrowPosition]="'before'">RS</mat-header-cell>
     <mat-cell class="right" *matCellDef="let element">{{element.runsScored}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="runsAllowed">
-    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header>RA</mat-header-cell>
+    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header [arrowPosition]="'before'">RA</mat-header-cell>
     <mat-cell class="right" *matCellDef="let element">{{element.runsAllowed}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="runDifferential">
-    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header>DIFF</mat-header-cell>
+    <mat-header-cell class="right" *matHeaderCellDef mat-sort-header [arrowPosition]="'before'">DIFF</mat-header-cell>
     <mat-cell class="right" *matCellDef="let element" [class.negative]="(element | diff) < 0" [class.positive]="(element | diff) > 0">{{element | diff}}</mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

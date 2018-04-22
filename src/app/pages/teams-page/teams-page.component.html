@@ -1,0 +1,5 @@
+<mat-grid-list cols="2" rowHeight="2.5:3.5" gutterSize="8px">
+  <mat-grid-tile *ngFor="let team of teams">
+    <bunt-team-card [team]="team"></bunt-team-card>
+  </mat-grid-tile>
+</mat-grid-list>

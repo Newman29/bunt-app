@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin|IBM+Plex+Serif:300,500,700');
+@import url('https://fonts.googleapis.com/css?family=Cabin|Oswald:200,400,600');
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import './app/shared/styles/variables';
 
@@ -6,13 +6,16 @@
 html {
   font-family: 'Cabin', sans-serif;
   font-size: 16px;
-}
+} 
 
 p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
-  font-family: 'IBM Plex Serif', serif;
-  margin: 1.414em 0 0.5em;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: $vintage-blue;
+  letter-spacing: 1.5px;
+  margin: 0 0 0.5em;
   font-weight: inherit;
   line-height: 1.2;
 }

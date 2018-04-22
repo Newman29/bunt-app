@@ -1,5 +1,8 @@
 @import '../../shared/styles/variables';
 
+mat-table {
+  min-width: 540px;
+}
 // Right align stats for a better viewing experience
 mat-cell.right, mat-header-cell.right {
   justify-content: flex-end;

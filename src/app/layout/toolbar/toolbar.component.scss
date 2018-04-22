@@ -3,10 +3,9 @@
 mat-toolbar {
   position: fixed;
   box-shadow: 0 -5px 15px 0 rgba(0,0,0,.08);
-  background-color: #FFFFFF;
+  @include cardboard-texture(rgba(#FFFFFF, 0.9));
   bottom: 0;
   z-index: 1;
-  border-top: 1px solid #DEDEDE;
 }
 
 .container {
