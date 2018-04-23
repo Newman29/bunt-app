@@ -12,7 +12,7 @@ export class TeamCardComponent implements OnInit, OnChanges {
 
   ngOnInit() { }
   ngOnChanges() {
-    this.renderer.setStyle(this.host.nativeElement, 'background-color', this.team.hex);
+    this.renderer.setStyle(this.host.nativeElement, 'border-color', this.team.hex);
   }
 
 }

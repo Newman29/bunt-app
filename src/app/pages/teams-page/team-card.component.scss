@@ -1,17 +1,22 @@
 @import '../../shared/styles/variables';
 
+$border-color: rgba(243,245,230,.95);
+$transparent-texture-color: rgba(255,255,255,0.00);
+$avatar-width: 30%;
+$aspect: (3.5/2.5);
+
 :host {
   box-sizing: border-box;
-  border: 8px solid rgba(255,255,255,0.95);
-  color: #FFFFFF;  
-  @include cardboard-texture($vintage-blue);
-  padding: $default-padding;
+  border: 8px solid $border-color;
+  padding: $default-padding__thin;
   text-align: center;
+  background-color: rgba(255,255,255,0.5);
 }
 
 h1, h2, h3, h4 {
-  font-size: 0.9em;
-  color: #FFFFFF;
+  font-weight: 200;
+  font-size: 1.2em;
+  padding: 8px 0;
 }
 
 button {
@@ -19,6 +24,12 @@ button {
 }
 
 .team-card {
+  &__title {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+  }
   &__content {
     position: absolute;
     left: 0;
@@ -29,18 +40,51 @@ button {
     justify-content: center;
     height: 100%;
     width: 100%;
+    @include cardboard-texture($transparent-texture-color);
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0px;
+    left: 0px;
+    padding: 8px;
+    margin: 8px;
+    text-align: left;
+    width: 100%;
   }
 }
+.captain-name {
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  color: $vintage-blue;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
 .player {
+  box-sizing: border-box;
   position: absolute;
   bottom: -10px;
   right: -10px;
-  background-color: rgba(255,255,255,0.1);
-  background-image: url('../../../assets/baseballplayer1915.svg');
+  border: 4px solid #555;
+  background-color: #EEEEEE;
+  background-image: url('../../../assets/amit_patel.jpg');
   background-repeat: no-repeat;
   background-position: 0px 0px;
   background-size: cover;
-  height: 20vw;
-  width: 20vw;
+  height: $avatar-width;
+  width: calc(#{$avatar-width} * #{$aspect}); // must match the card's aspect ratio
   border-radius: 100%;
+}
+
+.texture {
+  padding: 4px;
+  margin-left: -4px;
+  margin-top: -4px;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  @include cardboard-texture($transparent-texture-color);
 }

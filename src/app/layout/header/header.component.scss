@@ -15,11 +15,12 @@
 
   &__page-title {
     font-family: "Oswald", sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     color: #FFFFFF;
     display: flex;   
     justify-content: center;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    @include vintage-text-shadow(#666666);
   }
 }

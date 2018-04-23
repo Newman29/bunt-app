@@ -1,20 +1,182 @@
 [
   {
     "name": "Electric Blue",
+    "league": "solids",
     "nickname": "Aquaholics",
-    "short": "EBLU",
-    "hex": "#7DF9FF"
+    "short": "AQUA",
+    "hex": "#7DF9FF",
+    "textColor": "dark",
+    "captain": "Amit Patel"
+  },
+  {
+    "name": "White",
+    "league": "solids",
+    "nickname": "TBA",
+    "short": "WHT",
+    "hex": "#FFFFFF",
+    "textColor": "dark",
+    "captain": "Andy Fang"
+  },
+  {
+    "name": "Forest Green",
+    "league": "solids",
+    "nickname": "TBA",
+    "short": "FGRN",
+    "hex": "#228B22",
+    "textColor": "light",
+    "captain": "Casey Turk"
+  },
+  {
+    "name": "Graphite",
+    "league": "solids",
+    "nickname": "TBA",
+    "short": "GRPH",
+    "hex": "#777777",
+    "textColor": "light",
+    "captain": "Jared Peace"
   },
   {
     "name": "Gold",
-    "nickname": "Ice Gold Beer",
+    "league": "solids",
+    "nickname": "TBA",
     "short": "GLD",
-    "hex": "#FFDF00"
+    "hex": "#FFDF00",
+    "textColor": "dark",
+    "captain": "Margaret Porter"
   },
   {
-    "name": "Dark Red",
-    "nickname": "Redrum",
-    "short": "DRED",
-    "hex": "#8B0000"
+    "name": "Burnt Orange",
+    "league": "solids",
+    "nickname": "TBA",
+    "short": "BORG",
+    "hex": "#CC5500",
+    "textColor": "light",
+    "captain": "Mark Souther"
+  },
+  {
+    "name": "Black",
+    "league": "solids",
+    "nickname": "TBA",
+    "short": "BLK",
+    "hex": "#000000",
+    "textColor": "light",
+    "captain": "Nathalie Becker"
+  },
+  {
+    "name": "Purple",
+    "league": "solids",
+    "nickname": "TBA",
+    "short": "PRPL",
+    "hex": "#FF00FF",
+    "textColor": "light",
+    "captain": "Sryia Malladi"
+  },
+  {
+    "name": "Red",
+    "league": "solids",
+    "nickname": "TBA",
+    "short": "RED",
+    "hex": "#FF0000",
+    "textColor": "light",
+    "captain": "Tyler Aragon"
+  },
+  {
+    "name": "Royal Blue",
+    "league": "solids",
+    "nickname": "TBA",
+    "short": "RBLU",
+    "hex": "#4169E1",
+    "textColor": "light",
+    "captain": "William Withers"
+  },
+  {
+    "name": "Red",
+    "league": "stripes",
+    "nickname": "TBA",
+    "short": "RED",
+    "hex": "#FF0000",
+    "textColor": "light",
+    "captain": "Brian Steffy"
+  },
+  {
+    "name": "Purple",
+    "league": "stripes",
+    "nickname": "TBA",
+    "short": "PRPL",
+    "hex": "#FF00FF",
+    "textColor": "light",
+    "captain": "Chris McGrath"
+  },
+  {
+    "name": "White",
+    "league": "stripes",
+    "nickname": "TBA",
+    "short": "WHT",
+    "hex": "#FFFFFF",
+    "textColor": "dark",
+    "captain": "Ezra Miksic"
+  },
+  {
+    "name": "Black",
+    "league": "stripes",
+    "nickname": "TBA",
+    "short": "BLK",
+    "hex": "#000000",
+    "textColor": "light",
+    "captain": "Joe Storms"
+  },
+  {
+    "name": "Royal Blue",
+    "league": "stripes",
+    "nickname": "TBA",
+    "short": "RBLU",
+    "hex": "#4169E1",
+    "textColor": "light",
+    "captain": "Mark Hansen"
+  },
+  {
+    "name": "Forest Green",
+    "league": "stripes",
+    "nickname": "TBA",
+    "short": "FGRN",
+    "hex": "#228B22",
+    "textColor": "light",
+    "captain": "Obi Onyeacholem"
+  },
+  {
+    "name": "Burnt Orange",
+    "league": "stripes",
+    "nickname": "Oscar Meyer Winners",
+    "short": "BORG",
+    "hex": "#CC5500",
+    "textColor": "light",
+    "captain": "Oscar Urzua"
+  },
+  {
+    "name": "Columbia Blue",
+    "league": "stripes",
+    "nickname": "TBA",
+    "short": "CBLU",
+    "hex": "#9BDDFF",
+    "textColor": "dark",
+    "captain": "Ross Lenta"
+  },
+  {
+    "name": "Gold",
+    "league": "stripes",
+    "nickname": "TBA",
+    "short": "GLD",
+    "hex": "#FFDF00",
+    "textColor": "dark",
+    "captain": "Stephen Madden"
+  },
+  {
+    "name": "Graphite",
+    "league": "stripes",
+    "nickname": "TBA",
+    "short": "GRPH",
+    "hex": "#777777",
+    "textColor": "light",
+    "captain": "Ted Nguyen"
   }
 ]

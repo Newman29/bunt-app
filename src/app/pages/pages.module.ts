@@ -13,11 +13,13 @@ import { ScheduleService } from '../shared/services/schedule.service';
 import { ScheduledGameCardComponent } from './schedule-page/scheduled-game-card.component';
 import { TeamsListService } from '../shared/services/teams-list.service';
 import { TeamCardComponent } from './teams-page/team-card.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
     CommonModule,
-    BuntMaterialModule
+    BuntMaterialModule,
+    FlexLayoutModule
   ],
   declarations: [
     SchedulePageComponent,

@@ -8,6 +8,7 @@ import { LayoutModule } from './layout/layout.module';
 import { MatSidenavModule } from '@angular/material';
 import { BuntRoutingModule } from './bunt-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FlexLayoutModule,
     BuntRoutingModule,
     MatSidenavModule,
     LayoutModule,

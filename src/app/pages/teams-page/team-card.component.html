@@ -1,10 +1,15 @@
-<div class="team-card__title">
-  <h3>{{team.nickname}}</h3>
+<div class="team-card__title" [style.backgroundColor]="team.hex">
+  <h3 [style.color]="team.textColor == 'light' ? '#FFFFFF' : '#333333'">{{team.name}}</h3>
 </div>
 <div class="team-card__content">
   <button mat-button mat-elevation-z0>Roster <mat-icon>people</mat-icon></button>  
   <button mat-button mat-elevation-z0>Schedule <mat-icon>insert_invitation</mat-icon></button>
 </div>
 <div class="team-card__footer">
-  <div class="player"></div>  
+  <div class="captain-name" [ngStyle.xs]="{'font-size': '0.9rem'}">
+    {{team.captain}}
+  </div>
 </div>
+<div class="player" [style.borderColor]="team.hex">
+  <div class="texture"></div>  
+</div>  

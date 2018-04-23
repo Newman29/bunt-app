@@ -18,4 +18,8 @@ $default-padding__thick: 24px;
 @mixin cardboard-texture($color) {
   background-color: $color;
   background-image: url(../../../assets/cardboard.png);
-} 
+}
+
+@mixin vintage-text-shadow($color) {
+  text-shadow: 1px 1px $color, 2px 2px $color, 3px 3px $color;
+}
