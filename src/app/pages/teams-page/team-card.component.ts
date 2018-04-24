@@ -22,4 +22,6 @@ export interface TeamElement {
   short: string;
   hex: string;
   nickname: string;
+  textColor: string;
+  captain: string;
 }
