@@ -3,6 +3,7 @@ import { TeamsListService } from '../../shared/services/teams-list.service';
 import { ObservableMedia } from '@angular/flex-layout';
 import { MatGridList } from '@angular/material';
 import {trigger, transition, style, animate, query, stagger} from '@angular/animations';
+import { TeamElement } from './team-card.component';
 
 @Component({
   selector: 'bunt-teams-page',
@@ -30,7 +31,7 @@ export class TeamsPageComponent implements OnInit, AfterViewInit {
   @ViewChild('grid')
   private grid: MatGridList;
 
-  teams: any[];
+  teams: TeamElement[];
 
   constructor(
     private teamsListService: TeamsListService,

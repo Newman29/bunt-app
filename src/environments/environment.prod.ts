@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  firestoreUrl: 'https://firestore.googleapis.com/v1beta1/projects'
 };

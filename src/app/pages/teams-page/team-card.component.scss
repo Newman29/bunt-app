@@ -1,90 +1,121 @@
 @import '../../shared/styles/variables';
 
-$border-color: rgba(243,245,230,.95);
+$border-color: #ECEACF;
+$footer-bg-color: rgba(255,255,255,0.8);
 $transparent-texture-color: rgba(255,255,255,0.00);
 $avatar-width: 30%;
+$name-width: 60%;
 $aspect: (3.5/2.5);
+$footer-height: 54px;
 
 :host {
-  box-sizing: border-box;
-  border: 8px solid $border-color;
-  padding: $default-padding__thin;
-  text-align: center;
   background-color: rgba(255,255,255,0.5);
 }
 
-h1, h2, h3, h4 {
-  font-weight: 200;
-  font-size: 1.2em;
-  padding: 8px 0;
+.dark {
+  color: #000000;
 }
 
-button {
-  margin-bottom: $default-padding__thin;
+.light {
+  color: #FFFFFF;
 }
 
 .team-card {
-  &__title {
+  box-sizing: border-box;
+
+  &__name {
+    font-weight: 400;
+    font-size: 1.2em;
+    letter-spacing: 0;
+  }
+  &__league {
+    font-weight: 200;
+    font-size: 0.8em;
+    letter-spacing: 0;
+  }
+  &__texture {
     position: absolute;
-    top: 7px;
+    top: 0;
     left: 0;
+    height: 100%;
     width: 100%;
+    @include cardboard-texture(rgba(255,255,255,0));
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
   }
   &__content {
     position: absolute;
-    left: 0;
     top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    left: 0;
     height: 100%;
     width: 100%;
-    @include cardboard-texture($transparent-texture-color);
+    border: 8px solid $border-color;
+    padding: $default-padding__thin;
+  }
+
+  &__avatar {
+    position: absolute;
+    right: $default-padding__thin;
+    bottom: $footer-height + $default-padding;
+    height: $avatar-width;
+    width: calc(#{$avatar-width} * #{$aspect}); // must match the card's aspect ratio
+    border-radius: 9999px;
+    background-color: #333;
+    background-size: cover;
+  }
+  &__captain {
+    position: absolute;
+    left: $default-padding__thin;
+    bottom: $footer-height + $default-padding__thin;
+    width: $name-width;
+    font-size: 0.6rem;
+    font-weight: 200;
+  }
+  &__captain-name {
+    margin-bottom: 0;
+    
+    &--first {
+      font-weight: 200;
+    }
+    &--last {
+      font-weight: 400;
+    }
+  }
+  &__captain-subtitle {
+    margin-top: 0.2em;
+    margin-bottom: 0;
   }
   &__footer {
+    position: absolute;
+    bottom: $default-padding__thin;
+    left: $default-padding__thin;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    box-sizing: border-box;
-    bottom: 0px;
-    left: 0px;
-    padding: 8px;
-    margin: 8px;
-    text-align: left;
-    width: 100%;
-  }
-}
-.captain-name {
-  font-family: "Oswald", sans-serif;
-  font-weight: 200;
-  color: $vintage-blue;
-  text-transform: uppercase;
-  font-size: 1.1em;
-}
-.player {
-  box-sizing: border-box;
-  position: absolute;
-  bottom: -10px;
-  right: -10px;
-  border: 4px solid #555;
-  background-color: #EEEEEE;
-  background-image: url('../../../assets/amit_patel.jpg');
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
-  background-size: cover;
-  height: $avatar-width;
-  width: calc(#{$avatar-width} * #{$aspect}); // must match the card's aspect ratio
-  border-radius: 100%;
-}
+    justify-content: space-around;
+    background-color: $footer-bg-color;
+    width: calc(100% - #{$default-padding__thin} - #{$default-padding__thin});
+    height: $footer-height;
+    
+    .footer-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: none;
+      border-color: none;
+      cursor: pointer;
 
-.texture {
-  padding: 4px;
-  margin-left: -4px;
-  margin-top: -4px;
-  height: 100%;
-  width: 100%;
-  border-radius: 100%;
-  @include cardboard-texture($transparent-texture-color);
+      &__icon {
+        height: 16px;
+        width: 16px;
+        font-size: 16px;
+        padding-bottom: ($default-padding__thin / 2);
+      }
+
+      &__small-text {
+        font-size: 0.65rem;
+      }
+    }
+  }
 }

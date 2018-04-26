@@ -34,9 +34,3 @@ export interface ScheduledGameElement {
   away: string;
   field: string;
 }
-
-export interface TeamElement {
-  name: string;
-  short: string;
-  hex: string;
-}

@@ -1,11 +1,11 @@
 [
   {
-    "name": "Electric Blue",
-    "league": "solids",
-    "nickname": "Aquaholics",
+    "name": "Aquaholics",
     "short": "AQUA",
+    "color": "Electric Blue",
     "hex": "#7DF9FF",
     "textColor": "dark",
+    "league": "solids",
     "captain": "Amit Patel"
   },
   {
@@ -144,9 +144,9 @@
     "captain": "Obi Onyeacholem"
   },
   {
-    "name": "Burnt Orange",
+    "name": "Oscar Meyer Winners",
+    "color": "Burnt Orange",
     "league": "stripes",
-    "nickname": "Oscar Meyer Winners",
     "short": "BORG",
     "hex": "#CC5500",
     "textColor": "light",
