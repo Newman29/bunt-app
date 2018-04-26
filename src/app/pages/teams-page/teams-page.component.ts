@@ -52,10 +52,21 @@ export class TeamsPageComponent implements OnInit, AfterViewInit {
   }
 
   private updateGrid() {
-    if (this.media.isActive('xl')) { this.grid.cols = 6; }
-    else if (this.media.isActive('lg')) { this.grid.cols = 5; }
-    else if (this.media.isActive('md')) { this.grid.cols = 4; }
-    else if (this.media.isActive('sm')) { this.grid.cols = 3; }
-    else if (this.media.isActive('xs')) { this.grid.cols = 2; }
+    if (this.media.isActive('xl')) {
+      this.grid.cols = 6;
+      this.grid.gutterSize = '16px';
+    } else if (this.media.isActive('lg')) {
+      this.grid.cols = 5;
+      this.grid.gutterSize = '16px';
+    } else if (this.media.isActive('md')) {
+      this.grid.cols = 4;
+      this.grid.gutterSize = '16px';
+    } else if (this.media.isActive('sm')) {
+      this.grid.cols = 3;
+      this.grid.gutterSize = '8px';
+    } else if (this.media.isActive('xs')) {
+      this.grid.cols = 2;
+      this.grid.gutterSize = '8px';
+    }
   }
 }
