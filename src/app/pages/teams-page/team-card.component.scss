@@ -93,7 +93,7 @@ $footer-height: 54px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: $footer-bg-color;
+    // background-color: $footer-bg-color;
     width: calc(100% - #{$default-padding__thin} - #{$default-padding__thin});
     height: $footer-height;
     
@@ -102,7 +102,7 @@ $footer-height: 54px;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: none;
+      background-color: rgba(0,0,0,0.2);
       border-color: none;
       cursor: pointer;
 

@@ -13,12 +13,12 @@
   
 </div>
 <div class="team-card__footer">
-  <button class="footer-button">
-    <mat-icon class="footer-button__icon">people_outline</mat-icon>
-    <span class="footer-button__small-text">Roster</span>
+  <button mat-mini-fab class="footer-button">
+    <mat-icon class="footer-button__icon" [ngClass]="team.textColor">people_outline</mat-icon>
+    <!-- <span class="footer-button__small-text">Roster</span> -->
   </button>
-  <button class="footer-button">
-    <mat-icon class="footer-button__icon">access_time</mat-icon>
-    <span class="footer-button__small-text">Schedule</span>
+  <button mat-mini-fab class="footer-button">
+    <mat-icon class="footer-button__icon" [ngClass]="team.textColor">access_time</mat-icon>
+    <!-- <span class="footer-button__small-text">Schedule</span> -->
   </button>
 </div>
