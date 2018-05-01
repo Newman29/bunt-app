@@ -23,13 +23,13 @@ export class TeamsListService {
   }
 
   /**
-   * 
+   *
    * @param res A FireStore response from the REST API
-   * 
+   *
    * Parses a FireStoreResponse into flattened data.
    * Future features will convert the FireStore types into TypeScript types.
    * e.g. name: { stringValue: 'Bill' } to name<string>: 'Bill'
-   * 
+   *
    */
   parseFirestore(res: FirestoreResponse) {
     let data: any = [];
@@ -49,7 +49,7 @@ export class TeamsListService {
       item.updateTime = doc.updateTime;
       data.push(item);
     });
-
+    console.log(data);
     return data;
   }
 }

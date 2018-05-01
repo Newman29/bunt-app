@@ -1,0 +1,145 @@
+[
+  {
+    "charity": "Challenged Athletes Foundation",
+    "website": "www.challengedathletes.org/",
+    "category": "sports",
+    "volunteerOptions": true,
+    "location": "Sorrento Valley",
+    "coach": "Oscar Urzua"
+  },
+  {
+    "charity": "Empowerment Through Golf",
+    "website": "www.empowermentthroughgolf.org/",
+    "category": "sports",
+    "volunteerOptions": false,
+    "coach": "Casey Turk"
+  },
+  {
+    "charity": "Feeding America San Diego",
+    "website": "www.feedingsandiego.org/",
+    "category": "community",
+    "volunteerOptions": true,
+    "location": "Sorrento Valley",
+    "coach": "Obi Onyeacholem"
+  },
+  {
+    "charity": "I Love a Clean San Diego",
+    "website": "www.ilacsd.org/",
+    "category": "nature",
+    "volunteerOptions": true,
+    "location": "Liberty Station",
+    "coach": "Tyler Aragon"
+  },
+  {
+    "charity": "Meals-on-Wheels Greater San Diego",
+    "website": "www.meals-on-wheels.org/",
+    "category": "community",
+    "volunteerOptions": true,
+    "coach": "Nathalie Becker"
+  },
+  {
+    "charity": "Promises2Kids",
+    "website": "www.promises2kids.org/",
+    "category": "community",
+    "volunteerOptions": true,
+    "coach": "Ezra Miksic"
+  },
+  {
+    "charity": "Rady's Children Hospital Foundation",
+    "website": "www.radyfoundation.org/",
+    "category": "community",
+    "volunteerOptions": true,
+    "coach": "William Withers"
+  },
+  {
+    "charity": "Ronald McDonald House Charities of San Diego",
+    "website": "www.rmhcsd.org/",
+    "category": "community",
+    "volunteerOptions": true,
+    "coach": "Sriya Malladi"
+  },
+  {
+    "charity": "San Diego Coastkeepers",
+    "website": "www.sdcoastkeeper.org/",
+    "category": "nature",
+    "volunteerOptions": true,
+    "coach": "Jared Peace"
+  },
+  {
+    "charity": "San Diego Habitat for Humanity",
+    "website": "www.sandiegohabitat.org/",
+    "category": "community",
+    "volunteerOptions": true,
+    "coach": "Ted Nguyen"
+  },
+  {
+    "charity": "San Diego Humane Society",
+    "website": "www.sdhumane.org/",
+    "category": "animal rescue",
+    "volunteerOptions": true,
+    "coach": "Brian Steffy"
+  },
+  {
+    "charity": "Surfrider Foundation San Diego County Chapter",
+    "website": "https://sandiego.surfrider.org/",
+    "category": "nature",
+    "volunteerOptions": true,
+    "coach": "Margaret Porter"
+  },
+  {
+    "charity": "United Through Reading",
+    "website": "www.unitedthroughreading.org/",
+    "category": "community",
+    "volunteerOptions": true,
+    "coach": "Chris McGrath"
+  },
+  {
+    "charity": "United Way of San Diego",
+    "website": "www.uwsd.org/",
+    "category": "community",
+    "volunteerOptions": true,
+    "coach": "Andy Fang"
+  },
+  {
+    "charity": "Labs and More",
+    "website": "http://www.labsandmore.org/",
+    "category": "animal rescue",
+    "volunteerOptions": true,
+    "coach": "Amit Patel"
+  },
+  {
+    "charity": "Pints and Paws",
+    "website": "http://www.pintsandpawsevents.com/",
+    "category": "animal rescue",
+    "volunteerOptions": true,
+    "coach": "Joe Storms"
+  },
+  {
+    "charity": "SD Chill Foundation",
+    "website": "https://www.sandiegochill.org/",
+    "category": "community",
+    "volunteerOptions": true,
+    "coach": "Mark Souther"
+  },
+  {
+    "charity": "The Hoover Foundation",
+    "website": "https://www.sandiegounified.org/schools/hoover/foundation-mission",
+    "category": "education",
+    "volunteerOptions": true,
+    "coach": "Ross Lenta"
+  },
+  {
+    "charity": "Susan B Komen",
+    "website": "",
+    "category": "research",
+    "volunteerOptions": "",
+    "coach": "Mark Hansen"
+  },
+  {
+    "charity": "SD Zoo",
+    "website": "http://zoo.sandiegozoo.org/",
+    "category": "community",
+    "volunteerOptions": true,
+    "coach": "Stephen Madden"
+  }
+]

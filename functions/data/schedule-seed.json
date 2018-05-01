@@ -1,0 +1,802 @@
+[
+  {
+    "datetime": "2018-05-23T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Joe Storms",
+    "awayCaptain": "Obi Onyeacholem"
+  },
+  {
+    "datetime": "2018-05-23T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Casey Turk",
+    "awayCaptain": "Amit Patel"
+  },
+  {
+    "datetime": "2018-05-23T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Mark Hansen",
+    "awayCaptain": "Oscar Urzua"
+  },
+  {
+    "datetime": "2018-05-23T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Nathalie Becker",
+    "awayCaptain": "Jared Peace"
+  },
+  {
+    "datetime": "2018-05-23T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ross Lenta",
+    "awayCaptain": "Stephen Madden"
+  },
+  {
+    "datetime": "2018-05-30T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Andy Fang",
+    "awayCaptain": "Sriya Malladi"
+  },
+  {
+    "datetime": "2018-05-30T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Brian Steffy",
+    "awayCaptain": "Chris McGrath"
+  },
+  {
+    "datetime": "2018-05-30T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "William Withers",
+    "awayCaptain": "Mark Souther"
+  },
+  {
+    "datetime": "2018-05-30T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ted Nguyen",
+    "awayCaptain": "Ezra Miksic"
+  },
+  {
+    "datetime": "2018-05-30T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Margaret Porter",
+    "awayCaptain": "Tyler Aragon"
+  },
+  {
+    "datetime": "2018-06-04T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Amit Patel",
+    "awayCaptain": "Andy Fang"
+  },
+  {
+    "datetime": "2018-06-04T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ezra Miksic",
+    "awayCaptain": "Stephen Madden"
+  },
+  {
+    "datetime": "2018-06-04T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Mark Souther",
+    "awayCaptain": "Nathalie Becker"
+  },
+  {
+    "datetime": "2018-06-04T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Oscar Urzua",
+    "awayCaptain": "Brian Steffy"
+  },
+  {
+    "datetime": "2018-06-04T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Margaret Porter",
+    "awayCaptain": "Casey Turk"
+  },
+  {
+    "datetime": "2018-06-06T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Chris McGrath",
+    "awayCaptain": "Joe Storms"
+  },
+  {
+    "datetime": "2018-06-06T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Tyler Aragon",
+    "awayCaptain": "Jared Peace"
+  },
+  {
+    "datetime": "2018-06-06T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Obi Onyeacholem",
+    "awayCaptain": "Ross Lenta"
+  },
+  {
+    "datetime": "2018-06-06T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Sriya Malladi",
+    "awayCaptain": "William Withers"
+  },
+  {
+    "datetime": "2018-06-06T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ted Nguyen",
+    "awayCaptain": "Mark Hansen"
+  },
+  {
+    "datetime": "2018-06-11T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Brian Steffy",
+    "awayCaptain": "Ted Nguyen"
+  },
+  {
+    "datetime": "2018-06-11T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Nathalie Becker",
+    "awayCaptain": "Sriya Malladi"
+  },
+  {
+    "datetime": "2018-06-11T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Andy Fang",
+    "awayCaptain": "Margaret Porter"
+  },
+  {
+    "datetime": "2018-06-11T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "William Withers",
+    "awayCaptain": "Amit Patel"
+  },
+  {
+    "datetime": "2018-06-11T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Mark Hansen",
+    "awayCaptain": "Ezra Miksic"
+  },
+  {
+    "datetime": "2018-06-13T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Jared Peace",
+    "awayCaptain": "Mark Souther"
+  },
+  {
+    "datetime": "2018-06-13T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Stephen Madden",
+    "awayCaptain": "Obi Onyeacholem"
+  },
+  {
+    "datetime": "2018-06-13T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ross Lenta",
+    "awayCaptain": "Chris McGrath"
+  },
+  {
+    "datetime": "2018-06-13T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Joe Storms",
+    "awayCaptain": "Oscar Urzua"
+  },
+  {
+    "datetime": "2018-06-13T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Casey Turk",
+    "awayCaptain": "Tyler Aragon"
+  },
+  {
+    "datetime": "2018-06-18T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Tyler Aragon",
+    "awayCaptain": "Mark Souther"
+  },
+  {
+    "datetime": "2018-06-18T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ted Nguyen",
+    "awayCaptain": "Joe Storms"
+  },
+  {
+    "datetime": "2018-06-18T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Mark Hansen",
+    "awayCaptain": "Brian Steffy"
+  },
+  {
+    "datetime": "2018-06-18T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ezra Miksic",
+    "awayCaptain": "Obi Onyeacholem"
+  },
+  {
+    "datetime": "2018-06-18T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Sriya Malladi",
+    "awayCaptain": "Jared Peace"
+  },
+  {
+    "datetime": "2018-06-20T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Oscar Urzua",
+    "awayCaptain": "Ross Lenta"
+  },
+  {
+    "datetime": "2018-06-20T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Margaret Porter",
+    "awayCaptain": "William Withers"
+  },
+  {
+    "datetime": "2018-06-20T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Casey Turk",
+    "awayCaptain": "Andy Fang"
+  },
+  {
+    "datetime": "2018-06-20T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Amit Patel",
+    "awayCaptain": "Nathalie Becker"
+  },
+  {
+    "datetime": "2018-06-20T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Chris McGrath",
+    "awayCaptain": "Stephen Madden"
+  },
+  {
+    "datetime": "2018-06-25T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Brian Steffy",
+    "awayCaptain": "Ezra Miksic"
+  },
+  {
+    "datetime": "2018-06-25T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "William Withers",
+    "awayCaptain": "Casey Turk"
+  },
+  {
+    "datetime": "2018-06-25T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Stephen Madden",
+    "awayCaptain": "Oscar Urzua"
+  },
+  {
+    "datetime": "2018-06-25T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Obi Onyeacholem",
+    "awayCaptain": "Chris McGrath"
+  },
+  {
+    "datetime": "2018-06-25T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ross Lenta",
+    "awayCaptain": "Ted Nguyen"
+  },
+  {
+    "datetime": "2018-06-27T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Nathalie Becker",
+    "awayCaptain": "Margaret Porter"
+  },
+  {
+    "datetime": "2018-06-27T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Joe Storms",
+    "awayCaptain": "Mark Hansen"
+  },
+  {
+    "datetime": "2018-06-27T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Jared Peace",
+    "awayCaptain": "Amit Patel"
+  },
+  {
+    "datetime": "2018-06-27T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Andy Fang",
+    "awayCaptain": "Tyler Aragon"
+  },
+  {
+    "datetime": "2018-06-27T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Mark Souther",
+    "awayCaptain": "Sriya Malladi"
+  },
+  {
+    "datetime": "2018-07-09T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "TBD",
+    "awayCaptain": "TBD"
+  },
+  {
+    "datetime": "2018-07-09T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "TBD",
+    "awayCaptain": "TBD"
+  },
+  {
+    "datetime": "2018-07-09T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "TBD",
+    "awayCaptain": "TBD"
+  },
+  {
+    "datetime": "2018-07-09T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "TBD",
+    "awayCaptain": "TBD"
+  },
+  {
+    "datetime": "2018-07-09T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "TBD",
+    "awayCaptain": "TBD"
+  },
+  {
+    "datetime": "2018-07-11T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "TBD",
+    "awayCaptain": "TBD"
+  },
+  {
+    "datetime": "2018-07-11T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "TBD",
+    "awayCaptain": "TBD"
+  },
+  {
+    "datetime": "2018-07-11T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "TBD",
+    "awayCaptain": "TBD"
+  },
+  {
+    "datetime": "2018-07-11T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "TBD",
+    "awayCaptain": "TBD"
+  },
+  {
+    "datetime": "2018-07-11T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "TBD",
+    "awayCaptain": "TBD"
+  },
+  {
+    "datetime": "2018-07-16T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Margaret Porter",
+    "awayCaptain": "Jared Peace"
+  },
+  {
+    "datetime": "2018-07-16T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Amit Patel",
+    "awayCaptain": "Mark Souther"
+  },
+  {
+    "datetime": "2018-07-16T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ted Nguyen",
+    "awayCaptain": "Stephen Madden"
+  },
+  {
+    "datetime": "2018-07-16T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Mark Hansen",
+    "awayCaptain": "Ross Lenta"
+  },
+  {
+    "datetime": "2018-07-16T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Oscar Urzua",
+    "awayCaptain": "Obi Onyeacholem"
+  },
+  {
+    "datetime": "2018-07-18T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ezra Miksic",
+    "awayCaptain": "Chris McGrath"
+  },
+  {
+    "datetime": "2018-07-18T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Brian Steffy",
+    "awayCaptain": "Joe Storms"
+  },
+  {
+    "datetime": "2018-07-18T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Tyler Aragon",
+    "awayCaptain": "Sriya Malladi"
+  },
+  {
+    "datetime": "2018-07-18T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Casey Turk",
+    "awayCaptain": "Nathalie Becker"
+  },
+  {
+    "datetime": "2018-07-18T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Andy Fang",
+    "awayCaptain": "William Withers"
+  },
+  {
+    "datetime": "2018-07-23T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "William Withers",
+    "awayCaptain": "Tyler Aragon"
+  },
+  {
+    "datetime": "2018-07-23T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Nathalie Becker",
+    "awayCaptain": "Andy Fang"
+  },
+  {
+    "datetime": "2018-07-23T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Jared Peace",
+    "awayCaptain": "Casey Turk"
+  },
+  {
+    "datetime": "2018-07-23T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Chris McGrath",
+    "awayCaptain": "Oscar Urzua"
+  },
+  {
+    "datetime": "2018-07-23T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Sriya Malladi",
+    "awayCaptain": "Amit Patel"
+  },
+  {
+    "datetime": "2018-07-25T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Stephen Madden",
+    "awayCaptain": "Mark Hansen"
+  },
+  {
+    "datetime": "2018-07-25T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ross Lenta",
+    "awayCaptain": "Brian Steffy"
+  },
+  {
+    "datetime": "2018-07-25T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Joe Storms",
+    "awayCaptain": "Ezra Miksic"
+  },
+  {
+    "datetime": "2018-07-25T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Mark Souther",
+    "awayCaptain": "Margaret Porter"
+  },
+  {
+    "datetime": "2018-07-25T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Obi Onyeacholem",
+    "awayCaptain": "Ted Nguyen"
+  },
+  {
+    "datetime": "2018-07-30T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Joe Storms",
+    "awayCaptain": "Ross Lenta"
+  },
+  {
+    "datetime": "2018-07-30T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "William Withers",
+    "awayCaptain": "Nathalie Becker"
+  },
+  {
+    "datetime": "2018-07-30T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ted Nguyen",
+    "awayCaptain": "Chris McGrath"
+  },
+  {
+    "datetime": "2018-07-30T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Mark Hansen",
+    "awayCaptain": "Obi Onyeacholem"
+  },
+  {
+    "datetime": "2018-07-30T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Andy Fang",
+    "awayCaptain": "Jared Peace"
+  },
+  {
+    "datetime": "2018-08-01T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Tyler Aragon",
+    "awayCaptain": "Amit Patel"
+  },
+  {
+    "datetime": "2018-08-01T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ezra Miksic",
+    "awayCaptain": "Oscar Urzua"
+  },
+  {
+    "datetime": "2018-08-01T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Margaret Porter",
+    "awayCaptain": "Sriya Malladi"
+  },
+  {
+    "datetime": "2018-08-01T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Brian Steffy",
+    "awayCaptain": "Stephen Madden"
+  },
+  {
+    "datetime": "2018-08-01T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Casey Turk",
+    "awayCaptain": "Mark Souther"
+  },
+  {
+    "datetime": "2018-08-06T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Sriya Malladi",
+    "awayCaptain": "Casey Turk"
+  },
+  {
+    "datetime": "2018-08-06T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Ross Lenta",
+    "awayCaptain": "Ezra Miksic"
+  },
+  {
+    "datetime": "2018-08-06T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Nathalie Becker",
+    "awayCaptain": "Tyler Aragon"
+  },
+  {
+    "datetime": "2018-08-06T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Stephen Madden",
+    "awayCaptain": "Joe Storms"
+  },
+  {
+    "datetime": "2018-08-06T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Mark Souther",
+    "awayCaptain": "Andy Fang"
+  },
+  {
+    "datetime": "2018-08-08T18:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Chris McGrath",
+    "awayCaptain": "Mark Hansen"
+  },
+  {
+    "datetime": "2018-08-08T19:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Amit Patel",
+    "awayCaptain": "Margaret Porter"
+  },
+  {
+    "datetime": "2018-08-08T20:00:00",
+    "field": "Lit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Obi Onyeacholem",
+    "awayCaptain": "Brian Steffy"
+  },
+  {
+    "datetime": "2018-08-08T18:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Jared Peace",
+    "awayCaptain": "William Withers"
+  },
+  {
+    "datetime": "2018-08-08T19:00:00",
+    "field": "Unlit",
+    "home": "",
+    "away": "",
+    "homeCaptain": "Oscar Urzua",
+    "awayCaptain": "Ted Nguyen"
+  }
+]
