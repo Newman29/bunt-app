@@ -18,6 +18,7 @@ export class SchedulePageComponent implements OnInit {
 
   ngOnInit() {
     this.scheduleService.getSchedule().subscribe(res => {
+      console.log(res);
       this.schedule = res;
     });
 

@@ -6,7 +6,11 @@
 /tmp
 /out-tsc
 
+# functions (for now)
+/functions
+
 # dependencies
+bunt/node_modules
 /node_modules
 /functions/node_modules
 
