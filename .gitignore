@@ -3,6 +3,8 @@
 # compiled output
 /dist
 /public
+bunt/dist
+bunt/public
 /tmp
 /out-tsc
 

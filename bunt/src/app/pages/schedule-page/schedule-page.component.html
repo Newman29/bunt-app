@@ -1,7 +1,9 @@
-<mat-toolbar class="date-selector mat-elevation-z4">
-  <a mat-button class="date-button" *ngFor="let date of gameDates" [attr.href]="'/schedule#' + date">
-    <span class="date-button__month">{{date | date: 'MMM'}}</span>
-    <span class="date-button__date">{{date | date: 'dd'}}</span>
+<mat-toolbar class="date-selector" ngClass.lt-sm="date-selector--xs">
+  <a mat-button class="date-button" *ngFor="let date of gameDates" [attr.href]="'/schedule#' + date" fxLayoutAlign="center center">
+    <div class="date-button__label">
+      <span class="date-button__month">{{date | date: 'MMM'}}</span>
+      <span class="date-button__date">{{date | date: 'dd'}}</span>
+    </div>
   </a>
 </mat-toolbar>
 <div class="games-date" *ngFor="let date of gameDates" [attr.id]="date">

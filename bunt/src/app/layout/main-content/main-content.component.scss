@@ -1,8 +1,5 @@
 @import '../../shared/styles/variables';
 
-$toolbar-height-lg: 64px;
-$toolbar-height-sm: 56px;
-
 // Accounts for top and bottom toobar heights
 @mixin padding-with-toolbars($toolbar-height, $padding) {
   padding: calc(#{$padding} + #{$toolbar-height}) 0;

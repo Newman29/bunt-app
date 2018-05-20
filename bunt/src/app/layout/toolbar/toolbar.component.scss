@@ -2,7 +2,8 @@
 
 mat-toolbar {
   position: fixed;
-  box-shadow: 0 -5px 15px 0 rgba(0,0,0,.08);
+  background-color: white;
+  border-top: 1px solid #EEE;
   bottom: 0;
   z-index: 1;
 }
@@ -16,12 +17,19 @@ mat-toolbar {
 }
 
 .toolbar-button {
-  line-height: 1.0 !important; // we'll need to override this since this gets inherited from a theme
-  // display: flex;
-  // align-items: center;
-  // flex-direction: column;
+  color: #888;
+  line-height: 1.5rem !important; // we'll need to override this since this gets inherited from a theme
 
   &__text {
+    font-weight: 200;
     font-size: 0.8em;
+  }
+
+  &.active {
+    color: $america-blue;
+  }
+
+  &.active &__text {
+    font-weight: 500;
   }
 }

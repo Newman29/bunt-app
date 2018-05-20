@@ -9,27 +9,37 @@ bunt-scheduled-game-card:not(:last-child) {
 }
 
 .games-date {
-  margin-bottom: 30px;
+  margin-top: 30px;
+  
+  &__header {
+    text-align: center;
+  }
 }
 
 .date-selector {
   position: fixed;
-  top: 0;
+  bottom: $toolbar-height-lg;
+  background-color: blue;
+  color: white;
   overflow-y: scroll;
+
+  &--xs {
+    bottom: $toolbar-height-sm;
+  }
 }
 .date-button {
   height: 100%;
   width: 80px;
+  line-height: 1rem;
+  &__label {
 
+  }
   &__month {
-    display: block;
     font-size: 0.6rem;
     letter-spacing: 0.1rem;
-    line-height: 1.2rem;
     text-transform: uppercase;
   }
   &__date {
-    display: block;
     font-size: 1.2rem;
     font-weight: 200;
   }
