@@ -6,7 +6,7 @@
     </div>
   </a>
 </mat-toolbar>
-<div class="games-date" *ngFor="let date of gameDates" [attr.id]="date">
-  <h3 class="games-date__header">{{date | date: 'E, MMM d'}}</h3>
+<div class="game-date" ngClass.lt-sm="lt-sm" *ngFor="let date of gameDates" [attr.id]="date">
+  <h3 class="game-date__header">{{date | date: 'E, MMM d'}}</h3>
   <bunt-scheduled-game-card *ngFor="let game of scheduleByDate[date]" [game]="game"></bunt-scheduled-game-card>
 </div>

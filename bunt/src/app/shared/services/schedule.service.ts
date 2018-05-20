@@ -11,7 +11,7 @@ import { FirestoreResponse, FirestoreService } from './firestore.service';
 })
 export class ScheduleService {
   scheduleData: any;
-  url = environment.firestoreUrl + '/bunt-2018/databases/(default)/documents/games?pageSize=20';
+  url = environment.firestoreUrl + '/bunt-2018/databases/(default)/documents/games?pageSize=100';
 
   constructor(
     private http: HttpClient,

@@ -1,25 +1,36 @@
 @import '../../shared/styles/variables';
 
 :host {
-  padding-top: 56px;
+  padding-top: $toolbar-height-lg;
 }
 bunt-scheduled-game-card:not(:last-child) {
   display: block;
   padding-bottom: $default-padding__thin;
 }
 
-.games-date {
+.game-date {
   margin-top: 30px;
   
   &__header {
+    color: $america-blue;
     text-align: center;
+  }
+  
+  &:last-child {
+    margin-bottom: $toolbar-height-lg;
+  }
+
+  &.lt-sm {
+    &:last-child {
+      margin-bottom: $toolbar-height-sm;
+    }
   }
 }
 
 .date-selector {
   position: fixed;
   bottom: $toolbar-height-lg;
-  background-color: blue;
+  background-color: $america-blue;
   color: white;
   overflow-y: scroll;
 
