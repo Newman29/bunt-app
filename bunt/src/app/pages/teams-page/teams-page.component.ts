@@ -66,7 +66,7 @@ export class TeamsPageComponent implements OnInit, AfterViewInit {
       this.grid.gutterSize = '8px';
     } else if (this.media.isActive('xs')) {
       this.grid.cols = 2;
-      this.grid.gutterSize = '8px';
+      this.grid.gutterSize = '4px';
     }
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { ScheduledGameElement } from './schedule-page.component';
 import * as moment from 'moment';
+import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'bunt-scheduled-game-card',
@@ -13,8 +14,8 @@ export class ScheduledGameCardComponent implements OnInit, OnChanges {
   day: string;
   time: string;
   field: string;
-  homeTeam: string;
-  awayTeam: string;
+  home: string;
+  away: string;
 
   constructor() { }
 
@@ -24,8 +25,8 @@ export class ScheduledGameCardComponent implements OnInit, OnChanges {
     const date = moment(this.game.datetime);
     this.day = date.format('ddd, MMM D');
     this.time = date.format('h:mm A');
-    this.homeTeam = this.game.home;
-    this.awayTeam = this.game.away;
+    this.home = this.game.home;
+    this.away = this.game.away;
     this.field = this.game.field;
   }
 }

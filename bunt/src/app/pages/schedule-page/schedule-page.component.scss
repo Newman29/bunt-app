@@ -1,6 +1,36 @@
 @import '../../shared/styles/variables';
 
+:host {
+  padding-top: 56px;
+}
 bunt-scheduled-game-card:not(:last-child) {
   display: block;
   padding-bottom: $default-padding__thin;
+}
+
+.games-date {
+  margin-bottom: 30px;
+}
+
+.date-selector {
+  position: fixed;
+  top: 0;
+  overflow-y: scroll;
+}
+.date-button {
+  height: 100%;
+  width: 80px;
+
+  &__month {
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.2rem;
+    text-transform: uppercase;
+  }
+  &__date {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
 }

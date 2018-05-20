@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin|Oswald:200,400,600');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,400,600');
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import './app/shared/styles/variables';
 
 /* Base font size for application*/
 html {
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
 } 
 

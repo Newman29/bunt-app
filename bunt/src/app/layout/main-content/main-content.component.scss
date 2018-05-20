@@ -5,7 +5,7 @@ $toolbar-height-sm: 56px;
 
 // Accounts for top and bottom toobar heights
 @mixin padding-with-toolbars($toolbar-height, $padding) {
-  padding: calc(#{$padding} + #{$toolbar-height}) $padding;
+  padding: calc(#{$padding} + #{$toolbar-height}) 0;
 }
 mat-sidenav-container {
   position: absolute;
@@ -21,11 +21,9 @@ mat-sidenav {
 }
 
 .content-container {
-  background-color: rgba($vintage-yellow, 0.4);
   box-sizing: border-box;
   min-height: 100vh;
   width: 100%;
-  padding: 0 $default-padding__thin;
 }
 
 .mat-drawer-backdrop {

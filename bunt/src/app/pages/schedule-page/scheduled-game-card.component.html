@@ -1,4 +1,15 @@
-<mat-card class="game-card mat-elevation-z0">
-  <mat-card-title>{{awayTeam.name}} at {{homeTeam.name}}</mat-card-title>
-  <mat-card-subtitle>{{day}} at {{time}} on the {{field}} Nobel Athletic field</mat-card-subtitle>
-</mat-card>
+<div class="game">
+  <div class="game__away-team team">
+    <div class="team__label">away</div>
+    <div class="team__name">{{away}}</div>
+  </div>
+  <div class="game__time-location">
+    <div class="game__time">{{time}}</div>
+    <div class="game__location">{{field}} Field</div>
+  </div>
+  <div class="game__result"></div>
+  <div class="game__home-team team">
+      <div class="team__label">home</div>
+      <div class="team__name">{{home}}</div>
+    </div>
+</div>
