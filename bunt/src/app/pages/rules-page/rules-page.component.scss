@@ -1,0 +1,18 @@
+@import '../../shared/styles/variables';
+
+pdf-viewer {
+  max-width: 100vw;
+}
+
+.download-fab {
+  position: fixed;
+  z-index: 1;
+  bottom: $toolbar-height-lg + $default-padding;
+  right: $default-padding;
+  background-color: $america-blue;
+
+  &.xs {
+    bottom: $toolbar-height-sm + $default-padding;
+    right: $default-padding;
+  }
+}

@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { StandingsPageComponent } from './pages/standings-page/standings-page.component';
 import { SchedulePageComponent } from './pages/schedule-page/schedule-page.component';
 import { TeamsPageComponent } from './pages/teams-page/teams-page.component';
+import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/standings', pathMatch: 'full' },
@@ -27,6 +28,13 @@ const routes: Routes = [
     component: SchedulePageComponent,
     data: {
       title: 'Schedule'
+    }
+  },
+  {
+    path: 'rules',
+    component: RulesPageComponent,
+    data: {
+      title: 'Rules'
     }
   }
 ];

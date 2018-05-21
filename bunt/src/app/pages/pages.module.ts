@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { StandingsPageComponent } from './standings-page/standings-page.component';
 import { SchedulePageComponent } from './schedule-page/schedule-page.component';
 import { BuntMaterialModule } from '../shared/modules/bunt-material.module';
@@ -14,12 +15,14 @@ import { ScheduledGameCardComponent } from './schedule-page/scheduled-game-card.
 import { TeamsListService } from '../shared/services/teams-list.service';
 import { TeamCardComponent } from './teams-page/team-card.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { RulesPageComponent } from './rules-page/rules-page.component';
 
 @NgModule({
   imports: [
     CommonModule,
     BuntMaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    PdfViewerModule
   ],
   declarations: [
     SchedulePageComponent,
@@ -29,7 +32,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     TeamsPageComponent,
     TeamCardComponent,
     PctPipe,
-    DiffPipe
+    DiffPipe,
+    RulesPageComponent
   ],
   providers: [
     StandingsService,
