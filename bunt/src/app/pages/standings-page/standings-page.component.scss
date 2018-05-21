@@ -10,3 +10,14 @@ mat-card:not(:last-child) {
     overflow-x: auto;
   }
 }
+
+// TODO: remove after season starts
+.standings-container {
+  width: 100vw;
+  height: calc(100vh - #{$toolbar-height-lg} - #{$toolbar-height-lg});
+  text-align: center;
+
+  &.xs {
+    height: calc(100vh - #{$toolbar-height-sm} - #{$toolbar-height-sm});
+  }
+}

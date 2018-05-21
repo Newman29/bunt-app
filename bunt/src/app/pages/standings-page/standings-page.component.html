@@ -1,6 +1,13 @@
-<mat-card class="standings-card" *ngFor="let name of leagueNames" class="mat-elevation-z0">
+<!-- <mat-card class="standings-card" *ngFor="let name of leagueNames" class="mat-elevation-z0">
     <mat-card-title class="standings-card__title">{{name}}</mat-card-title>
     <mat-card-content class="standings-card__content">
       <bunt-standings-table [standingsData]="tableData"></bunt-standings-table>
     </mat-card-content>
-</mat-card>
+</mat-card> -->
+
+<div class="standings-container" ngClass.lt-sm="xs" fxLayoutAlign="center center">
+  <div class="hold-up-msg">
+    <h2>2018 Season Kickoff: Wednesday, May 23</h2>
+    <p>Standings will be updated after the opening day.</p>
+  </div>
+</div>
