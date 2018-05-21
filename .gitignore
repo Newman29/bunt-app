@@ -3,13 +3,12 @@
 # compiled output
 /dist
 /public
-bunt/dist
-bunt/public
+/bunt/dist
+/bunt/public
+/cloud-functions/functions/lib
+/cloud-functions/functions/node_modules
 /tmp
 /out-tsc
-
-# functions (for now)
-/functions
 
 # dependencies
 bunt/node_modules
