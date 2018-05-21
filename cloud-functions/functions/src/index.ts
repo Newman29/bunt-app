@@ -11,6 +11,7 @@ import { TEAMS_COLLECTION, GAMES_COLLECTION } from './constants';
 import { duplicateCollection } from './collections';
 import { updateScheduleAfterTeamNameChange, updateCollectionDocsWithObject } from './operations';
 import { calculateStandings } from './standings';
+// import { rosters } from '../data/rosters';
 
 /**
  * Setup
@@ -96,3 +97,27 @@ export const seedScores = functions.https.onRequest(async (req, res) => {
 
   return res.status(200).end();
 });
+
+// export const seedTeamRosters = functions.https.onRequest(async (req, res) => {
+//   const rosterData = rosters;
+//   const batch = firestore.batch();
+//   const teamsRef = firestore.collection(TEAMS_COLLECTION);
+  
+//   const teams = await teamsRef.get();
+
+//   let writeCount = 0;
+//   teams.forEach(async (team) => {
+//     const ref = firestore.collection(TEAMS_COLLECTION).doc(team.id).collection('roster');
+//     const teamRosterData = rosters[team.data().id]; // should get an array of names for the roster
+
+//     teamRosterData.forEach(name => {
+//       console.log(`Writing ${name} to team id: ${team.data().id}.`);
+//       batch.set(teamsRef.doc(team.id).collection('roster').doc(), { name: name });
+//       writeCount++;
+//     })
+//   });
+
+//   batch.commit();
+//   console.log(`Wrote ${writeCount} documents.`);
+//   return res.status(200).end();
+// });
