@@ -6,12 +6,13 @@ import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
 import * as fs from 'fs';
+import * as _ from "lodash";
 import { resolve } from 'dns';
 import { TEAMS_COLLECTION, GAMES_COLLECTION } from './constants';
 import { duplicateCollection } from './collections';
 import { updateScheduleAfterTeamNameChange, updateCollectionDocsWithObject } from './operations';
 import { calculateStandings } from './standings';
-// import { rosters } from '../data/rosters';
+import { rosters } from '../data/rosters';
 
 /**
  * Setup
@@ -99,26 +100,40 @@ export const seedScores = functions.https.onRequest(async (req, res) => {
   return res.status(200).end();
 });
 
-// export const seedTeamRosters = functions.https.onRequest(async (req, res) => {
-//   const rosterData = rosters;
-//   const batch = firestore.batch();
-//   const teamsRef = firestore.collection(TEAMS_COLLECTION);
+export const seedTeamRosters = functions.https.onRequest(async (req, res) => {
+  const rosterData = rosters;
+  const teamsRef = firestore.collection(TEAMS_COLLECTION);
   
-//   const teams = await teamsRef.get();
+  const teams = await teamsRef.get();
+  // First clear the rosters
+  
+  teams.forEach(async (team) => {
+    const batch = firestore.batch();
+    // Initialize counters
+    let writeCount = 0;
+    let deleteCount = 0;
+    
+    console.log(`Replacing roster for team: ${team.data().name}...`);
+    const ref = firestore.collection(TEAMS_COLLECTION).doc(team.id).collection('roster');
+    const teamRosterData = rosters[team.data().id]; // should get an array of names for the roster
+    
+    // Delete team roster before replacing
+    const existing = await ref.get();
+    existing.forEach(doc => {
+      const docRef = ref.doc(doc.id);
+      batch.delete(docRef);
+      deleteCount++;
+    })
+    console.log(`Deleted ${deleteCount} documents from roster collection for team: ${team.data().name}`);
 
-//   let writeCount = 0;
-//   teams.forEach(async (team) => {
-//     const ref = firestore.collection(TEAMS_COLLECTION).doc(team.id).collection('roster');
-//     const teamRosterData = rosters[team.data().id]; // should get an array of names for the roster
+    teamRosterData.forEach(name => {
+      batch.set(teamsRef.doc(team.id).collection('roster').doc(), { name: name });
+      writeCount++;
+    })
+    
+    await batch.commit();
+    console.log(`Wrote ${writeCount} documents to roster collection for team: ${team.data().name}`);
+  });
 
-//     teamRosterData.forEach(name => {
-//       console.log(`Writing ${name} to team id: ${team.data().id}.`);
-//       batch.set(teamsRef.doc(team.id).collection('roster').doc(), { name: name });
-//       writeCount++;
-//     })
-//   });
-
-//   batch.commit();
-//   console.log(`Wrote ${writeCount} documents.`);
-//   return res.status(200).end();
-// });
+  return res.status(200).end();
+});
