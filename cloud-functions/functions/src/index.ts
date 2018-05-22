@@ -28,6 +28,7 @@ export const updateStandings = functions.firestore.document('games/{gameId}').on
 
 /**
  * Will update team names elsewhere in the db when team info gets updated (hopefully very infrequently)
+ * e.g. updateTeams({before: { id: 4, name: 'Green Monster'}, after: {id: 4, name: 'Caseydilla and the Salsa Verdes'} }, {params: { docId: 'Casey Turk'}})
  */
 export const updateTeams = functions.firestore.document('teams/{docId}').onUpdate(async (change, context) => {
   return updateScheduleAfterTeamNameChange(change, context);
