@@ -37,7 +37,6 @@ export class TeamDetailComponent implements OnInit {
         return Observable.of([]);
       }
     }).subscribe(roster => {
-      console.log(roster);
       this.roster = roster;
     });
   }

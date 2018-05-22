@@ -19,6 +19,7 @@ import { RulesPageComponent } from './rules-page/rules-page.component';
 import { TeamDetailComponent } from './teams-page/team-detail/team-detail.component';
 import { FancyTitleComponent } from '../shared/components/fancy-title/fancy-title.component';
 import { RouterModule } from '@angular/router';
+import { CountdownComponent } from '../shared/components/countdown/countdown.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { RouterModule } from '@angular/router';
     DiffPipe,
     RulesPageComponent,
     TeamDetailComponent,
-    FancyTitleComponent
+    FancyTitleComponent,
+    CountdownComponent
   ],
   providers: [
     StandingsService,

@@ -1,6 +1,6 @@
 <div *ngFor="let league of leagues" class="teams-in-league">
   <bunt-fancy-title [title]="league"></bunt-fancy-title>
-  <mat-grid-list [cols]="columnNum" [rowHeight]="rowHeight" [gutterSize]="gutterSize" [@listAnimation]="teams ? teams.length : 0">
+  <mat-grid-list [cols]="columnNum" [rowHeight]="rowHeight" [gutterSize]="gutterSize">
     <mat-grid-tile *ngFor="let id of leagueIds[league]">
       <bunt-team-card [team]="teamData[league][id]"></bunt-team-card>
     </mat-grid-tile>

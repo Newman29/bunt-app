@@ -2,30 +2,12 @@ import { Component, OnInit, AfterViewInit, ViewChild, ViewChildren, QueryList } 
 import { TeamsListService } from '../../shared/services/teams-list.service';
 import { ObservableMedia } from '@angular/flex-layout';
 import { MatGridList } from '@angular/material';
-import {trigger, transition, style, animate, query, stagger} from '@angular/animations';
 import { TeamElement } from './team-card.component';
 
 @Component({
   selector: 'bunt-teams-page',
   templateUrl: './teams-page.component.html',
-  styleUrls: ['./teams-page.component.scss'],
-  animations: [
-    trigger('listAnimation', [
-      transition('* => *', [ // each time the binding value changes
-        query(':leave', [
-          stagger(100, [
-            animate('0.25s', style({ opacity: 0 }))
-          ])
-        ], { optional: true }),
-        query(':enter', [
-          style({ opacity: 0 }),
-          stagger(100, [
-            animate('0.25s', style({ opacity: 1 }))
-          ])
-        ], { optional: true })
-      ])
-    ])
-  ]
+  styleUrls: ['./teams-page.component.scss']
 })
 export class TeamsPageComponent implements OnInit, AfterViewInit {
   @ViewChildren(MatGridList) gridLists: QueryList<MatGridList>;

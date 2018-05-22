@@ -10,6 +10,8 @@ import { BuntRoutingModule } from './bunt-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TeamsRoutingModule } from './pages/teams-page/teams-routing.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { TeamsRoutingModule } from './pages/teams-page/teams-routing.module';
     MatSidenavModule,
     LayoutModule,
     BuntRoutingModule,
-    TeamsRoutingModule
+    TeamsRoutingModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

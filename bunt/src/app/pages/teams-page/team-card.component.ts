@@ -27,6 +27,7 @@ export class TeamCardComponent implements OnInit, OnChanges {
 }
 
 export interface TeamElement {
+  id: string;
   name: string;
   short: string;
   hex: string;
