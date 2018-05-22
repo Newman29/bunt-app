@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  firestoreUrl: 'https://firestore.googleapis.com/v1beta1/projects'
+  firestoreUrl: 'https://firestore.googleapis.com/v1beta1'
 };
 
 /*

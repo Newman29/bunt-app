@@ -16,6 +16,7 @@ import { TeamsListService } from '../shared/services/teams-list.service';
 import { TeamCardComponent } from './teams-page/team-card.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RulesPageComponent } from './rules-page/rules-page.component';
+import { TeamDetailComponent } from './teams-page/team-detail/team-detail.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { RulesPageComponent } from './rules-page/rules-page.component';
     TeamCardComponent,
     PctPipe,
     DiffPipe,
-    RulesPageComponent
+    RulesPageComponent,
+    TeamDetailComponent
   ],
   providers: [
     StandingsService,

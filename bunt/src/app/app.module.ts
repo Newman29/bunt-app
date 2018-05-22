@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material';
 import { BuntRoutingModule } from './bunt-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TeamsRoutingModule } from './pages/teams-page/teams-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BuntRoutingModule,
     MatSidenavModule,
     LayoutModule,
-    BuntRoutingModule
+    BuntRoutingModule,
+    TeamsRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

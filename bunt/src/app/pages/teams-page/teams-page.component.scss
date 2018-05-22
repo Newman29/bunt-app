@@ -6,3 +6,24 @@ bunt-team-card {
   height: 100%;
   width: 100%;
 }
+
+.league-title {
+  &__container {
+    width: 100vw;
+  }
+
+  &__banner {
+    margin: 24px;
+    padding: 24px;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+  }
+
+  &__text {
+    margin: 0;
+  }
+}
+
+.league-title:not(:first-of-type) {
+  margin-top: 24px;
+}

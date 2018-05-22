@@ -17,13 +17,6 @@ const routes: Routes = [
     }
   },
   {
-    path: 'teams',
-    component: TeamsPageComponent,
-    data: {
-      title: 'Teams'
-    }
-  },
-  {
     path: 'schedule',
     component: SchedulePageComponent,
     data: {

@@ -1,6 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { ScheduleService } from '../../shared/services/schedule.service';
-import { TeamsListService } from '../../shared/services/teams-list.service';
 import * as moment from 'moment';
 
 @Component({

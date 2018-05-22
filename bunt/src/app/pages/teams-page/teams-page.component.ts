@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ViewChildren, QueryList } from '@angular/core';
 import { TeamsListService } from '../../shared/services/teams-list.service';
 import { ObservableMedia } from '@angular/flex-layout';
 import { MatGridList } from '@angular/material';
@@ -28,10 +28,17 @@ import { TeamElement } from './team-card.component';
   ]
 })
 export class TeamsPageComponent implements OnInit, AfterViewInit {
-  @ViewChild('grid')
-  private grid: MatGridList;
+  @ViewChildren(MatGridList) gridLists: QueryList<MatGridList>;
 
-  teams: TeamElement[];
+  teamData: any;
+  leagues: any[];
+  leagueIds: any = {};
+
+  // Grid Settings
+  columnNum = 4;
+  rowHeight = '2.5:3.5';
+  gutterSize = '8px';
+
 
   constructor(
     private teamsListService: TeamsListService,
@@ -39,34 +46,42 @@ export class TeamsPageComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit() {
+    // Set initial grid layout
+    this.updateGrid();
+
+    this.media.subscribe(change => {
+      this.updateGrid();
+    });
+
     this.teamsListService.getTeams().subscribe(res => {
-      this.teams = res;
+      this.teamData = res;
+      this.leagues = Object.keys(this.teamData);
+      this.leagues.forEach(league => {
+        this.leagueIds[league] = Object.keys(this.teamData[league]);
+      });
     });
   }
 
   ngAfterViewInit() {
     this.updateGrid();
-    this.media.subscribe(change => {
-      this.updateGrid();
-    });
   }
 
   private updateGrid() {
     if (this.media.isActive('xl')) {
-      this.grid.cols = 6;
-      this.grid.gutterSize = '16px';
+      this.columnNum = 6;
+      this.gutterSize = '16px';
     } else if (this.media.isActive('lg')) {
-      this.grid.cols = 5;
-      this.grid.gutterSize = '16px';
+      this.columnNum = 5;
+      this.gutterSize = '16px';
     } else if (this.media.isActive('md')) {
-      this.grid.cols = 4;
-      this.grid.gutterSize = '16px';
+      this.columnNum = 4;
+      this.gutterSize = '16px';
     } else if (this.media.isActive('sm')) {
-      this.grid.cols = 3;
-      this.grid.gutterSize = '8px';
+      this.columnNum = 3;
+      this.gutterSize = '8px';
     } else if (this.media.isActive('xs')) {
-      this.grid.cols = 2;
-      this.grid.gutterSize = '4px';
+      this.columnNum = 2;
+      this.gutterSize = '4px';
     }
   }
 }

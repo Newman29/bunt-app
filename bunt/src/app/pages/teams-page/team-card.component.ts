@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef, Renderer2, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, OnChanges } from '@angular/core';
 
 const assetsRelativeUrl = '../../assets/';
 
@@ -13,16 +13,17 @@ export class TeamCardComponent implements OnInit, OnChanges {
   captainLastName: string;
   avatarFilename: string;
 
-  constructor(private host: ElementRef, private renderer: Renderer2) { }
+  constructor(private host: ElementRef) { }
 
   ngOnInit() { }
   ngOnChanges() {
-    this.captainFirstName = this.team.captain.split(' ')[0];
-    this.captainLastName = this.team.captain.split(' ')[1];
-    this.avatarFilename = assetsRelativeUrl + this.captainFirstName + this.captainLastName + '.jpg';
-    this.avatarFilename = this.avatarFilename.toLowerCase();
+    if (this.team) {
+      this.captainFirstName = this.team.captain.split(' ')[0];
+      this.captainLastName = this.team.captain.split(' ')[1];
+      this.avatarFilename = assetsRelativeUrl + this.captainFirstName + this.captainLastName + '.jpg';
+      this.avatarFilename = this.avatarFilename.toLowerCase();
+    }
   }
-
 }
 
 export interface TeamElement {

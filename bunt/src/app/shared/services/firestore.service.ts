@@ -7,7 +7,7 @@ export class FirestoreService {
 
   constructor() { }
 
-  public parseResponse(res: FirestoreResponse) {
+  public parseResponse(res: FirestoreResponse): any[] {
     const data: any = []; // The data object to build and return
     const documents: FirestoreDocument[] = res.documents;
 
