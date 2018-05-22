@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import * as moment from 'moment';
 
 @Component({
   selector: 'bunt-countdown',
@@ -22,10 +23,11 @@ export class CountdownComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit() {
-    const untilTime = new Date(this.untilDate).getTime();
+    // const untilTime = new Date(this.untilDate).getTime();
+    const untilTime = moment(this.untilDate).valueOf();
 
     this.intervalId = setInterval(() => {
-      const delta = untilTime - Date.now();
+      const delta = untilTime - moment().valueOf();
 
       if (delta < 1000) {
         this.expired = true;
