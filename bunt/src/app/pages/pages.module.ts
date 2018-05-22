@@ -17,13 +17,16 @@ import { TeamCardComponent } from './teams-page/team-card.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RulesPageComponent } from './rules-page/rules-page.component';
 import { TeamDetailComponent } from './teams-page/team-detail/team-detail.component';
+import { FancyTitleComponent } from '../shared/components/fancy-title/fancy-title.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     BuntMaterialModule,
     FlexLayoutModule,
-    PdfViewerModule
+    PdfViewerModule,
+    RouterModule
   ],
   declarations: [
     SchedulePageComponent,
@@ -35,7 +38,8 @@ import { TeamDetailComponent } from './teams-page/team-detail/team-detail.compon
     PctPipe,
     DiffPipe,
     RulesPageComponent,
-    TeamDetailComponent
+    TeamDetailComponent,
+    FancyTitleComponent
   ],
   providers: [
     StandingsService,

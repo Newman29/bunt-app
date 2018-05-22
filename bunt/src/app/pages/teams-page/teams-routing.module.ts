@@ -14,7 +14,10 @@ const routes: Routes = [
   },
   {
     path: 'team/:id',
-    component: TeamDetailComponent
+    component: TeamDetailComponent,
+    data: {
+      title: 'Roster'
+    }
   }
 ];
 

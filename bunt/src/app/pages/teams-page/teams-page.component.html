@@ -1,9 +1,5 @@
 <div *ngFor="let league of leagues" class="teams-in-league">
-  <div class="league-title league-title__container" fxLayoutAlign="center center">
-    <div class="league-title__banner" fxLayoutAlign="center center">
-        <h4 class="league-title__text"><i>{{league}}</i></h4>
-    </div>
-  </div>
+  <bunt-fancy-title [title]="league"></bunt-fancy-title>
   <mat-grid-list [cols]="columnNum" [rowHeight]="rowHeight" [gutterSize]="gutterSize" [@listAnimation]="teams ? teams.length : 0">
     <mat-grid-tile *ngFor="let id of leagueIds[league]">
       <bunt-team-card [team]="teamData[league][id]"></bunt-team-card>

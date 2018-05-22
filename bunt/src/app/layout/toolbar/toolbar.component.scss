@@ -6,6 +6,7 @@ mat-toolbar {
   border-top: 1px solid #EEE;
   bottom: 0;
   z-index: 1;
+  padding: 0 $default-padding__thin;
 }
 
 .container {
@@ -32,4 +33,8 @@ mat-toolbar {
   &.active &__text {
     font-weight: 500;
   }
+}
+
+.mat-button {
+  min-width: 78px;
 }

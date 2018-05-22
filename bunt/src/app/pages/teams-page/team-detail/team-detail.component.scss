@@ -1,0 +1,8 @@
+@import '../../../shared/styles/variables';
+
+.back-button {
+  position: absolute;
+  top: calc(#{$toolbar-height-lg} + #{$default-padding__thin});
+  left: $default-padding;
+  background-color: $america-blue;
+}

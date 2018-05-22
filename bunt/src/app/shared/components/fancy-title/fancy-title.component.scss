@@ -1,9 +1,3 @@
-bunt-team-card {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
 .fancy-title {
   &__container {
     width: 100vw;
@@ -19,8 +13,4 @@ bunt-team-card {
   &__text {
     margin: 0;
   }
-}
-
-.league-title:not(:first-of-type) {
-  margin-top: 24px;
 }

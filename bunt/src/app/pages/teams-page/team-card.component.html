@@ -13,12 +13,7 @@
   
 </div>
 <div class="team-card__footer">
-  <button mat-mini-fab class="footer-button">
-    <mat-icon (click)="testRosterUrl()" class="footer-button__icon" [ngClass]="team.textColor">people_outline</mat-icon>
-    <!-- <span class="footer-button__small-text">Roster</span> -->
-  </button>
-  <button mat-mini-fab class="footer-button">
-    <mat-icon class="footer-button__icon" [ngClass]="team.textColor">access_time</mat-icon>
-    <!-- <span class="footer-button__small-text">Schedule</span> -->
+  <button [routerLink]="'/team/' + team.id" mat-button class="footer-button">
+    <mat-icon class="footer-button__icon" [ngClass]="team.textColor">people_outline</mat-icon>
   </button>
 </div>
