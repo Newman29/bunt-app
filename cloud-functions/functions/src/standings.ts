@@ -2,6 +2,7 @@ import { firestore } from './index';
 import { getCollectionData } from './collections';
 import { TEAMS_COLLECTION, GAMES_COLLECTION } from './constants';
 import { WriteBatch, CollectionReference } from '@google-cloud/firestore';
+import * as _ from 'lodash';
 
 export async function updateRecords() {
   const batch = firestore.batch();
@@ -31,7 +32,9 @@ export async function updateRecords() {
 
     updateRecordByResult(awayScore, awayRecord, homeScore, homeRecord);
   })
+  
   // 4. Calculate ranking based on league
+  calculateRankings(teamRecords);
 
   teams.forEach(team => {
     const record = teamRecords[team.id];
@@ -64,9 +67,10 @@ function writeRecord(batch: WriteBatch, teamRecord: TeamRecord, collection?: Col
   batch.set(collectionReference.doc(teamRecord.id.toString()), teamRecord.toDocument());
 }
 
-function calculateRankings() {
-  return console.log(`calculating rankings done`);
+function calculateRankings(records: any) {
+  console.log('TODO: calcluating rankings');
 }
+
 function updateRecordByResult(
   awayScore: number,
   away: TeamRecord,
@@ -88,7 +92,7 @@ function updateRecordByResult(
  * Good helper functions for team records
  */
 class TeamRecord {
-  public rank = 0;  // having a zero rank means no rank has been calculated or can be determined
+  public leagueRank = 0;  // having a zero rank means no rank has been calculated or can be determined
   public runsScored = 0;
   public runsAllowed = 0;
 
@@ -184,7 +188,8 @@ class TeamRecord {
     return {
       id: this.id,
       short: this.short,
-      rank: this.rank,
+      name: this.name,
+      rank: this.leagueRank,
       wins: this.wins,
       losses: this.losses,
       ties: this.ties,
