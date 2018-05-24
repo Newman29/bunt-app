@@ -1,8 +1,8 @@
 import { Component, OnInit, OnChanges, Input, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatSort } from '@angular/material';
 import { Observable } from 'rxjs';
-import { DiffPipe } from './diff.pipe';
 import { PctPipe } from './pct.pipe';
+import { StandingsRecord } from '../../shared/services/standings.service';
 
 @Component({
   selector: 'bunt-standings-table',
@@ -10,26 +10,25 @@ import { PctPipe } from './pct.pipe';
   styleUrls: ['./standings-table.component.scss']
 })
 export class StandingsTableComponent implements OnInit, OnChanges {
-  @Input() standingsData: StandingsElement[];
+  @Input() standingsData: StandingsRecord[];
   @ViewChild(MatSort) sort: MatSort;
   dataSource = new MatTableDataSource();
-  displayedColumns = ['name', 'rank', 'wins', 'losses', 'pct', 'ties', 'runsScored', 'runsAllowed', 'runDifferential'];
+  displayedColumns = ['name', 'rank', 'wins', 'losses', 'ties', 'pct', 'runsScored', 'runsAllowed', 'runDifferential'];
 
   constructor() {
-    const diffPipe = new DiffPipe();
     const pctPipe = new PctPipe();
     // Custom data accessors for sorting
-    this.dataSource.sortingDataAccessor = (data: StandingsElement, property: string) => {
+    this.dataSource.sortingDataAccessor = (data: StandingsRecord, property: string) => {
       switch (property) {
-        case 'name': return data.teamName;
+        case 'name': return data.short;
         case 'rank': return +data.rank;
         case 'wins': return +data.wins;
         case 'losses': return +data.losses;
-        case 'pct': return +pctPipe.transform(data);
+        case 'pct': return +data.winPct;
         case 'ties': return +data.ties;
-        case 'runsScored': return +data.runsScored;
-        case 'runsAllowed': return +data.runsAllowed;
-        case 'runDifferential': return +diffPipe.transform(data);
+        case 'runsScored': return +data.rs;
+        case 'runsAllowed': return +data.ra;
+        case 'runDifferential': return +data.diff;
         default: return '';
       }
     };
@@ -37,6 +36,7 @@ export class StandingsTableComponent implements OnInit, OnChanges {
 
   ngOnInit() {}
   ngOnChanges() {
+    console.log(this.standingsData);
     if (this.standingsData) {
       this.dataSource.data = this.standingsData;
       this.dataSource.sort = this.sort;
@@ -44,15 +44,3 @@ export class StandingsTableComponent implements OnInit, OnChanges {
   }
 }
 
-export interface StandingsElement {
-  'teamId': number;
-  'teamName': string;
-  'teamSymbol': string;
-  'teamColor': string;
-  'rank': number;
-  'wins': number;
-  'losses': number;
-  'ties': number;
-  'runsScored': number;
-  'runsAllowed': number;
-}

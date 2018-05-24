@@ -1,18 +1,6 @@
-<!-- <mat-card class="standings-card" *ngFor="let name of leagueNames" class="mat-elevation-z0">
-    <mat-card-title class="standings-card__title">{{name}}</mat-card-title>
-    <mat-card-content class="standings-card__content">
-      <bunt-standings-table [standingsData]="tableData"></bunt-standings-table>
-    </mat-card-content>
-</mat-card> -->
-
-<div class="standings-container" ngClass.lt-sm="xs" fxLayoutAlign="center center">
-  <div class="hold-up-msg">
-    <h2>Only</h2>
-    <bunt-countdown 
-      untilDate="2018-05-23T18:00:00-0700"
-      untilMsg="Until the first game of 2018"
-      expiredMsg="Play Ball!">
-    </bunt-countdown>
-    <p>We'll update the standings after the first round of games.</p>
-  </div>
-</div>
+<mat-card class="standings-card" class="mat-elevation-z0" *ngFor="let league of leagues">
+  <mat-card-title class="standings-card__title">{{league | uppercase}}</mat-card-title>
+  <mat-card-content class="standings-card__content">
+    <bunt-standings-table [standingsData]="standingsByLeague[league]"></bunt-standings-table>
+  </mat-card-content>
+</mat-card>

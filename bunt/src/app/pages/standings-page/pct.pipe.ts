@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { StandingsElement } from './standings-table.component';
+import { StandingsRecord } from '../../shared/services/standings.service';
 
 @Pipe({
   name: 'pct',
@@ -7,11 +7,8 @@ import { StandingsElement } from './standings-table.component';
 })
 export class PctPipe implements PipeTransform {
 
-  transform(element: StandingsElement, decimals: number = 3): any {
-    const totalGames = element.wins + element.ties + element.losses;
-    const winPts = element.wins + 0.5 * element.ties;
-
-    const pctStr = (winPts / totalGames).toFixed(decimals).toString();
+  transform(pct: number, decimals: number = 3): any {
+    const pctStr = Number(pct).toFixed(decimals).toString();
 
     // Strip off the leading 0 if there is one
     if (pctStr.charAt(0) === '0') {

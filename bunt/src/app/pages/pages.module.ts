@@ -9,7 +9,6 @@ import { StandingsService } from '../shared/services/standings.service';
 import { HttpClient } from '@angular/common/http';
 import { StandingsTableComponent } from './standings-page/standings-table.component';
 import { PctPipe } from './standings-page/pct.pipe';
-import { DiffPipe } from './standings-page/diff.pipe';
 import { ScheduleService } from '../shared/services/schedule.service';
 import { ScheduledGameCardComponent } from './schedule-page/scheduled-game-card.component';
 import { TeamsListService } from '../shared/services/teams-list.service';
@@ -37,7 +36,6 @@ import { CountdownComponent } from '../shared/components/countdown/countdown.com
     TeamsPageComponent,
     TeamCardComponent,
     PctPipe,
-    DiffPipe,
     RulesPageComponent,
     TeamDetailComponent,
     FancyTitleComponent,
