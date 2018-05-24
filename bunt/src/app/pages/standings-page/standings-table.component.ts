@@ -1,7 +1,6 @@
 import { Component, OnInit, OnChanges, Input, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatSort } from '@angular/material';
+import { MatTableDataSource, MatSort, MatSortable } from '@angular/material';
 import { Observable } from 'rxjs';
-import { PctPipe } from './pct.pipe';
 import { StandingsRecord } from '../../shared/services/standings.service';
 
 @Component({
@@ -15,8 +14,9 @@ export class StandingsTableComponent implements OnInit, OnChanges {
   dataSource = new MatTableDataSource();
   displayedColumns = ['name', 'rank', 'wins', 'losses', 'ties', 'pct', 'runsScored', 'runsAllowed', 'runDifferential'];
 
-  constructor() {
-    const pctPipe = new PctPipe();
+  constructor() {}
+
+  ngOnInit() {
     // Custom data accessors for sorting
     this.dataSource.sortingDataAccessor = (data: StandingsRecord, property: string) => {
       switch (property) {
@@ -24,23 +24,28 @@ export class StandingsTableComponent implements OnInit, OnChanges {
         case 'rank': return +data.rank;
         case 'wins': return +data.wins;
         case 'losses': return +data.losses;
-        case 'pct': return +data.winPct;
+        case 'pct': return +data.winPct + +data.diff; // hack to sort by both win pct and diff
         case 'ties': return +data.ties;
         case 'runsScored': return +data.rs;
         case 'runsAllowed': return +data.ra;
-        case 'runDifferential': return +data.diff;
+        case 'runDifferential': return +data.diff + +data.winPct; // hack to sort by both win pct and diff
         default: return '';
       }
     };
   }
-
-  ngOnInit() {}
   ngOnChanges() {
     console.log(this.standingsData);
     if (this.standingsData) {
       this.dataSource.data = this.standingsData;
+      this.sort.sort(<MatSortable>{
+        id: 'runDifferential',
+        start: 'desc'
+      });
+      this.sort.sort(<MatSortable>{
+        id: 'pct',
+        start: 'desc'
+      });
       this.dataSource.sort = this.sort;
     }
   }
 }
-

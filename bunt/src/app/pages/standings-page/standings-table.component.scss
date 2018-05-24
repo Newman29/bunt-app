@@ -17,3 +17,13 @@ mat-cell.negative {
 mat-cell.positive {
   color: $status-success;
 }
+
+// Column sizes
+.mat-column {
+  &-name {
+    min-width: 125px;
+  }
+  &-rank, &-wins, &-losses, &-ties {
+    max-width: 75px;
+  }
+}
