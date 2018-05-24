@@ -23,13 +23,14 @@ export class TeamDetailComponent implements OnInit {
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
     this.teamsListService.getTeams().switchMap(res => {
-      const leagues = Object.keys(res);
+      const keys = Object.keys(res);
 
-      leagues.forEach(league => {
-        if (typeof res[league][this.id] !== 'undefined') {
-          this.detail = res[league][this.id];
-        }
-      });
+      // Flatten one layer deep to get a dictionary of all teams
+      const teams = keys.reduce((acc, key) => {
+        return {...acc, ...res[key]};
+      }, {});
+
+      this.detail = teams[this.id];
 
       if (this.detail) {
         return this.teamsListService.getRostersForTeam(this.detail.documentName);
