@@ -41,6 +41,10 @@ export class FirestoreService {
       if (type === 'mapValue') {
         // For mapValue types, we need to parse the fields, we can do this recursively
         data[key] = this.parseFields(obj[type].fields);
+      } else if (type === 'integerValue') {
+        data[key] = Number(obj[type]);
+      } else if (type === 'booleanValue') {
+        data[key] = Boolean(obj[type]);
       } else {
         data[key] = obj[type]; // e.g. 'Dodgers'
       }
