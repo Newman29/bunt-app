@@ -8,7 +8,7 @@ import { TeamsPageComponent } from './pages/teams-page/teams-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/standings', pathMatch: 'full' },
+  { path: '', redirectTo: '/schedule', pathMatch: 'full' },
   {
     path: 'standings',
     component: StandingsPageComponent,
