@@ -6,8 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./fancy-title.component.scss']
 })
 export class FancyTitleComponent implements OnInit {
-  @Input() title: string;
-
   constructor() { }
 
   ngOnInit() {
