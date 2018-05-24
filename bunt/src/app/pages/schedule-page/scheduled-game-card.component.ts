@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { ScheduledGameElement } from './schedule-page.component';
 import * as moment from 'moment';
 import { MatTableDataSource } from '@angular/material';
 
@@ -9,13 +8,16 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./scheduled-game-card.component.scss']
 })
 export class ScheduledGameCardComponent implements OnInit, OnChanges {
-  @Input() game: ScheduledGameElement;
+  @Input() game;
 
   day: string;
   time: string;
   field: string;
   home: string;
   away: string;
+  final: boolean;
+  awayScore: number;
+  homeScore: number;
 
   constructor() { }
 
@@ -28,5 +30,8 @@ export class ScheduledGameCardComponent implements OnInit, OnChanges {
     this.home = this.game.home;
     this.away = this.game.away;
     this.field = this.game.field;
+    this.final = this.game.final;
+    this.awayScore = this.game.awayScore;
+    this.homeScore = this.game.homeScore;
   }
 }

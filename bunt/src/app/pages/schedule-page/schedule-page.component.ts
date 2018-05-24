@@ -45,11 +45,3 @@ export class SchedulePageComponent implements OnInit {
     window.scrollTo(window.scrollX, window.scrollY - 56 - 8);
   }
 }
-
-export interface ScheduledGameElement {
-  id: number;
-  datetime: string;
-  home: string;
-  away: string;
-  field: string;
-}

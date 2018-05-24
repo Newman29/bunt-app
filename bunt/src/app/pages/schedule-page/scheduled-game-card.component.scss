@@ -23,7 +23,7 @@
     &__name {
       overflow-wrap: break-word;
       word-wrap: break-word;
-      font-weight: 200;
+      font-weight: 300;
     }
   }
   &__time-location {
@@ -37,5 +37,10 @@
   &__location {
     font-size: 1.0rem;
     color: #888888;
+  }
+  &__score {
+    &.winner {
+      font-weight: 500;
+    }
   }
 }

@@ -3,9 +3,13 @@
     <div class="team__label">away</div>
     <div class="team__name">{{away}}</div>
   </div>
-  <div class="game__time-location">
+  <div *ngIf="!final" class="game__time-location">
     <div class="game__time">{{time}}</div>
     <div class="game__location">{{field}} Field</div>
+  </div>
+  <div *ngIf="final" class="game__time-location" fxLayoutAlign="center center" fxLayoutGap="27%">
+    <div class="game__score game__score--away" [ngClass]="{'winner': (awayScore - homeScore) > 0}">{{awayScore}}</div>
+    <div class="game__score game__score--home" [ngClass]="{'winner': (homeScore - awayScore) > 0}">{{homeScore}}</div>
   </div>
   <div class="game__result"></div>
   <div class="game__home-team team">

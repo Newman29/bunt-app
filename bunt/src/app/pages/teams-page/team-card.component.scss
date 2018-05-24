@@ -33,7 +33,7 @@ $footer-height: 54px;
     }
   }
   &__league {
-    font-weight: 200;
+    font-weight: 300;
     font-size: 0.8em;
     letter-spacing: 0;
   }
@@ -74,13 +74,13 @@ $footer-height: 54px;
     bottom: $footer-height + $default-padding__thin;
     width: $name-width;
     font-size: 0.6rem;
-    font-weight: 200;
+    font-weight: 300;
   }
   &__captain-name {
     margin-bottom: 0;
     
     &--first {
-      font-weight: 200;
+      font-weight: 300;
     }
     &--last {
       font-weight: 400;
@@ -118,7 +118,7 @@ $footer-height: 54px;
       }
 
       &__text {
-        font-weight: 200;
+        font-weight: 300;
         font-size: 0.8em;
       }
     }
