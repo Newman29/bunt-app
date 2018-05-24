@@ -1,8 +1,11 @@
 import { firestore } from './index';
 import { getCollectionData } from './collections';
 import { TEAMS_COLLECTION, GAMES_COLLECTION } from './constants';
+import { WriteBatch, CollectionReference } from '@google-cloud/firestore';
 
-export async function calculateStandings() {
+export async function updateRecords() {
+  const batch = firestore.batch();
+
   // 0. Get all teams, create TeamRecords for each
   const teams = await getCollectionData(TEAMS_COLLECTION);
   const teamRecords = teams.reduce((records, team) => {
@@ -11,7 +14,6 @@ export async function calculateStandings() {
     return records;
   }, {});
   
-  console.log(teamRecords);
   // 1. Iterate through each game of the schedule
   // 2. Pull out the games that have been completed
   const completedQuery = await firestore.collection(GAMES_COLLECTION)
@@ -33,6 +35,7 @@ export async function calculateStandings() {
 
   teams.forEach(team => {
     const record = teamRecords[team.id];
+
     console.log(`
     Team: ${record.short}, ${record.league}
     W: ${record.wins}
@@ -45,11 +48,20 @@ export async function calculateStandings() {
     DIFF: ${record.runDifferential}
     LREC: ${record.leagueWins} - ${record.leagueLosses} - ${record.leagueTies}
     `);
+
+    writeRecord(batch, record);
   })
   // 5. Run rankings through a tiebreaker, adjust if necessary
   // 6. Format and write to db
-
+  batch.commit()
   return console.log(`standings done`);
+}
+
+function writeRecord(batch: WriteBatch, teamRecord: TeamRecord, collection?: CollectionReference): void {
+  // Use default reference if none passed in
+  const collectionReference = typeof collection !== 'undefined' ? collection : firestore.collection('standings');
+  console.log('Writing document into the standings collection...');
+  batch.set(collectionReference.doc(teamRecord.id.toString()), teamRecord.toDocument());
 }
 
 function calculateRankings() {
@@ -76,6 +88,7 @@ function updateRecordByResult(
  * Good helper functions for team records
  */
 class TeamRecord {
+  public rank = 0;  // having a zero rank means no rank has been calculated or can be determined
   public runsScored = 0;
   public runsAllowed = 0;
 
@@ -90,10 +103,10 @@ class TeamRecord {
    * @param short The short abbrv. of the team name
    */
   constructor(
-    public id: number,
-    public name?: string,
-    public short?: string,
-    public league?: string
+    public id: string,
+    public name: string,
+    public short: string,
+    public league: string
   ) {}
   
   public get wins(): number {
@@ -165,5 +178,29 @@ class TeamRecord {
   public hasTiebreakAgainst(team: TeamRecord): boolean {
     // TODO
     return false;
+  }
+
+  public toDocument() {
+    return {
+      id: this.id,
+      short: this.short,
+      rank: this.rank,
+      wins: this.wins,
+      losses: this.losses,
+      ties: this.ties,
+      gp: this.gamesPlayed,
+      winPct: this.winPct,
+      rs: this.runsScored,
+      ra: this.runsAllowed,
+      diff: this.runDifferential,
+      league: {
+        division: this.league,
+        wins: this.leagueWins,
+        losses: this.leagueLosses,
+        ties: this.leagueTies,
+        gp: this.leagueGamesPlayed,
+        winPct: this.leagueWinPct
+      }
+    }
   }
 }

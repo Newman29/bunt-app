@@ -11,7 +11,7 @@ import { resolve } from 'dns';
 import { TEAMS_COLLECTION, GAMES_COLLECTION } from './constants';
 import { duplicateCollection } from './collections';
 import { updateScheduleAfterTeamNameChange, updateCollectionDocsWithObject } from './operations';
-import { calculateStandings } from './standings';
+import { updateRecords } from './standings';
 import { rosters } from '../data/rosters';
 
 /**
@@ -20,13 +20,17 @@ import { rosters } from '../data/rosters';
 admin.initializeApp();
 export const firestore = admin.firestore();
 
-export const updateStandings = functions.firestore.document('games/{gameId}').onUpdate(async (change, context) => {
-  // Make sure to punt if scores are not updated so we don't utilize extra Cloud Function quota
-  calculateStandings();
+// export const updateStandings = functions.firestore.document('games/{gameId}').onUpdate(async (change, context) => {
+//   // Make sure to punt if scores are not updated so we don't utilize extra Cloud Function quota
+//   calculateStandings();
 
-  return console.log(`Done calculating the standings.`);
-});
+//   return console.log(`Done calculating the standings.`);
+// });
 
+export const updateStandings = functions.https.onRequest(async (req, res) => {
+  updateRecords();
+  return res.status(200).end();
+})
 /**
  * Will update team names elsewhere in the db when team info gets updated (hopefully very infrequently)
  * e.g. updateTeams({before: { id: 4, name: 'Green Monster'}, after: {id: 4, name: 'Caseydilla and the Salsa Verdes'} }, {params: { docId: 'Casey Turk'}})
