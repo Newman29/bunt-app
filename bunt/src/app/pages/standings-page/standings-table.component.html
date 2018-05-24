@@ -1,6 +1,6 @@
 <mat-table [dataSource]="dataSource" matSort>
   <ng-container matColumnDef="name">
-    <mat-header-cell class="left" *matHeaderCellDef mat-sort-header></mat-header-cell>
+    <mat-header-cell class="left" *matHeaderCellDef mat-sort-header>Team</mat-header-cell>
     <mat-cell class="left" *matCellDef="let element">{{element.name}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="rank">

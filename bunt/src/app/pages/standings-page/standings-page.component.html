@@ -1,6 +1,8 @@
-<mat-card class="standings-card" class="mat-elevation-z4" *ngFor="let league of leagues">
-  <mat-card-title class="standings-card__title">{{league | uppercase}}</mat-card-title>
-  <mat-card-content class="standings-card__content">
-    <bunt-standings-table [standingsData]="standingsByLeague[league]"></bunt-standings-table>
-  </mat-card-content>
-</mat-card>
+<ng-container *ngFor="let league of leagues">
+  <bunt-fancy-title>{{league}}</bunt-fancy-title>
+  <mat-card class="standings-card" class="mat-elevation-z4">
+    <mat-card-content class="standings-card__content">
+      <bunt-standings-table [standingsData]="standingsByLeague[league]"></bunt-standings-table>
+    </mat-card-content>
+  </mat-card>
+</ng-container>
