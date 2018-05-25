@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnDestroy, ApplicationRef } from '@angular/core';
-import * as moment from 'moment';
+import * as moment from 'moment-mini-ts';
 import { Subject } from 'rxjs';
 import 'rxjs/add/operator/takeUntil';
 

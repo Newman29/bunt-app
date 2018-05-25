@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import * as moment from 'moment';
+import * as moment from 'moment-mini-ts';
 import { MatTableDataSource } from '@angular/material';
 
 @Component({

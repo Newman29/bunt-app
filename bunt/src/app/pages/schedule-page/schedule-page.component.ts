@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { ScheduleService } from '../../shared/services/schedule.service';
-import * as moment from 'moment';
+import * as moment from 'moment-mini-ts';
 
 @Component({
   selector: 'bunt-schedule-page',
