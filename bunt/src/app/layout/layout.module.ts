@@ -5,10 +5,9 @@ import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { BuntRoutingModule } from '../bunt-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
 
 const MaterialModule = [
-  MatSidenavModule,
   MatToolbarModule,
   MatIconModule,
   MatButtonModule

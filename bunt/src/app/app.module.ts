@@ -4,11 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
-
-import { MatSidenavModule } from '@angular/material';
 import { BuntRoutingModule } from './bunt-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
@@ -20,9 +17,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FlexLayoutModule,
     BuntRoutingModule,
-    MatSidenavModule,
     LayoutModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
