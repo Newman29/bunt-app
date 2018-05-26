@@ -11,6 +11,20 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "headers": [ {
+      "source" : "**/@(main|polyfills|runtime).*.js",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=31536000"
+      } ]
+    },
+    {
+      "source": "**/styles.*.css",
+      "headers": [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=31536000"
+      } ]
+    } ]
   }
 }
