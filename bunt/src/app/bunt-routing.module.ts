@@ -2,10 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
-import { StandingsPageComponent } from './pages/standings-page/standings-page.component';
-import { SchedulePageComponent } from './pages/schedule-page/schedule-page.component';
-import { TeamsPageComponent } from './pages/teams-page/teams-page.component';
-import { RulesPageComponent } from './rules/rules-page/rules-page.component';
 
 const routes: Routes = [
   {
@@ -16,15 +12,22 @@ const routes: Routes = [
     }
   },
   {
+    path: 'teams',
+    loadChildren: './teams/teams.module#TeamsModule',
+    data: {
+      title: 'Teams'
+    }
+  },
+  {
     path: 'standings',
-    component: StandingsPageComponent,
+    loadChildren: './standings/standings.module#StandingsModule',
     data: {
       title: 'Standings'
     }
   },
   {
     path: 'schedule',
-    component: SchedulePageComponent,
+    loadChildren: './schedule/schedule.module#ScheduleModule',
     data: {
       title: 'Schedule'
     }

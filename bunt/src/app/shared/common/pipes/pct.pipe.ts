@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { StandingsRecord } from '../../shared/services/standings.service';
 
 @Pipe({
   name: 'pct',
@@ -17,5 +16,4 @@ export class PctPipe implements PipeTransform {
 
     return pctStr;
   }
-
 }
