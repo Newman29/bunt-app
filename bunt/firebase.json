@@ -13,7 +13,7 @@
       }
     ],
     "headers": [ {
-      "source" : "**/@(main|polyfills|runtime).*.js",
+      "source" : "**/@(main|polyfills|runtime|common|[0-9]*).*.js",
       "headers" : [ {
         "key" : "Cache-Control",
         "value" : "max-age=31536000"
