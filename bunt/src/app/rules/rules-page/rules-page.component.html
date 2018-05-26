@@ -1,0 +1,13 @@
+<pdf-viewer [src]="rulesUrl" [autoresize]="true" [original-size]="false" [(page)]="currentPage" [show-all]="false"></pdf-viewer>
+<div class="pdf-navigation" ngClass.lt-sm="xs" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="16px">
+  <div class="pdf-navigation__page-buttons" fxLayoutAlign="center center" fxLayoutGap="16px">
+    <button (click)="previousPage()" mat-fab class="pdf-navigation__button pdf-navigation__button--prev">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button (click)="nextPage()" mat-fab class="pdf-navigation__button pdf-navigation__button--next">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</div>
+<a fxFlexAlign="end" class="download-fab" ngClass.lt-sm="xs" mat-fab [attr.href]="rulesUrl" target="_blank"><mat-icon>save_alt</mat-icon></a>
+
