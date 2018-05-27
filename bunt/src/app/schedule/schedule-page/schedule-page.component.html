@@ -1,12 +1,12 @@
 <mat-toolbar class="date-selector" ngClass.lt-sm="date-selector--xs">
-  <a mat-button class="date-button" *ngFor="let date of gameDates" [attr.href]="'/schedule#' + date" fxLayoutAlign="center center">
+  <a mat-button class="date-button" *ngFor="let date of gameDates" (click)="jumpToHash(date)" fxLayoutAlign="center center">
     <div class="date-button__label">
       <span class="date-button__month">{{date | date: 'MMM'}}</span>
       <span class="date-button__date">{{date | date: 'dd'}}</span>
     </div>
   </a>
 </mat-toolbar>
-<div class="game-date" ngClass.lt-sm="lt-sm" *ngFor="let date of gameDates" [attr.id]="date">
+<div #games class="game-date" ngClass.lt-sm="lt-sm" *ngFor="let date of gameDates" [attr.id]="date">
   <h3 class="game-date__header">{{date | date: 'E, MMM d'}}</h3>
   <bunt-scheduled-game-card *ngFor="let game of scheduleByDate[date]" [game]="game"></bunt-scheduled-game-card>
 </div>
