@@ -24,7 +24,7 @@ export class StandingsTableComponent implements OnInit, OnChanges {
         case 'rank': return +data.rank;
         case 'wins': return +data.wins;
         case 'losses': return +data.losses;
-        case 'pct': return +data.winPct + +data.diff; // hack to sort by both win pct and diff
+        case 'pct': return (+data.winPct * 100000) + +data.diff; // hack to sort by both win pct and diff
         case 'ties': return +data.ties;
         case 'runsScored': return +data.rs;
         case 'runsAllowed': return +data.ra;
