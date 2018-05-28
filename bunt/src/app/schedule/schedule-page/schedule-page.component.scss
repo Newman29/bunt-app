@@ -14,6 +14,7 @@ bunt-scheduled-game-card:not(:last-child) {
   &__header {
     color: $america-blue;
     text-align: center;
+    padding-top: 30px;
   }
   
   &:last-child {
