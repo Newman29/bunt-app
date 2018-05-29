@@ -5,6 +5,7 @@
 
   </div>
   <div *ngIf="!final" class="game__time-location">
+    <div class="game__date" *ngIf="displayDate">{{day}}</div>
     <div class="game__time">{{time}}</div>
     <div class="game__location">{{field}} Field</div>
   </div>
