@@ -1,0 +1,36 @@
+<bunt-fancy-title>{{detail?.name}}</bunt-fancy-title>
+<div class="team-details__summary">
+  <div class="team-details__league">{{detail?.league | uppercase}} League</div>
+  <div class="team-details__record">{{teamRecord?.wins}}-{{teamRecord?.losses}}-{{teamRecord?.ties}}</div>
+  
+</div>
+<mat-accordion class="team-details__sections">
+  <mat-expansion-panel hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>Schedule</mat-panel-title>
+      <mat-panel-description>
+        <mat-icon>access_timer</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <bunt-team-schedule [teamId]="detail?.id"></bunt-team-schedule>
+  </mat-expansion-panel>
+  <mat-expansion-panel hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>Roster</mat-panel-title>
+      <mat-panel-description>
+        <mat-icon>people_outline</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <bunt-team-roster [roster]="roster"></bunt-team-roster>
+  </mat-expansion-panel>
+  <mat-expansion-panel hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>Charity</mat-panel-title>
+      <mat-panel-description>
+        <mat-icon>sentiment_satisfied_alt</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <bunt-team-cause [cause]="detail?.cause"></bunt-team-cause>
+  </mat-expansion-panel>
+</mat-accordion>
+

@@ -1,0 +1,12 @@
+<h4>{{cause?.charity}}</h4>
+<a mat-icon-button [href]="cause?.website" target="_blank">
+  <mat-icon>language</mat-icon>
+</a>
+<button
+  *ngIf="cause?.volunteerOptions"
+  matTooltip="Volunteer options are available. Please contact the coach for more information."
+  matTooltipPosition="after"
+  mat-icon-button [disableRipple]="true"
+>
+  <mat-icon>how_to_reg</mat-icon>
+</button>

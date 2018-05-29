@@ -6,11 +6,13 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { BuntRoutingModule } from '../bunt-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 const MaterialModule = [
   MatToolbarModule,
   MatIconModule,
-  MatButtonModule
+  MatButtonModule,
+  OverlayModule
 ];
 
 @NgModule({

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { TeamsListService } from '../../../shared/services/teams-list.service';
+import { TeamsListService } from '../../shared/services/teams-list.service';
 import { ActivatedRoute } from '@angular/router';
 
 import { Observable } from 'rxjs/observable';
 import 'rxjs/add/operator/switchMap';
+import { StandingsService } from '../../shared/services/standings.service';
 
 @Component({
   selector: 'bunt-team-detail',
@@ -14,14 +15,21 @@ export class TeamDetailComponent implements OnInit {
   id: string;
   detail: any;
   roster: string[];
+  teamRecord: any;
 
   constructor(
     private teamsListService: TeamsListService,
+    private standingsService: StandingsService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
+    this.standingsService.getStandings().subscribe(standings => {
+      console.log(standings);
+      this.teamRecord = standings.filter(rec => +rec.id === +this.id)[0];
+      console.log(this.teamRecord);
+    });
     this.teamsListService.getTeams().switchMap(res => {
       const keys = Object.keys(res);
 

@@ -1,43 +1,28 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ViewChildren, QueryList } from '@angular/core';
-import { TeamsListService } from '../../shared/services/teams-list.service';
+import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
 import { ObservableMedia } from '@angular/flex-layout';
-import { TeamElement } from './team-card.component';
 
 @Component({
-  selector: 'bunt-teams-page',
-  templateUrl: './teams-page.component.html',
-  styleUrls: ['./teams-page.component.scss']
+  selector: 'bunt-team-roster',
+  templateUrl: './team-roster.component.html',
+  styleUrls: ['./team-roster.component.scss']
 })
-export class TeamsPageComponent implements OnInit, AfterViewInit {
-  teamData: any;
-  leagues: any[];
-  leagueIds: any = {};
+export class TeamRosterComponent implements OnInit, AfterViewInit {
+  @Input() roster: string[];
 
   // Grid Settings
   columnNum = 4;
-  rowHeight = '2.5:3.5';
+  rowHeight = '2rem';
   gutterSize = '8px';
 
 
   constructor(
-    private teamsListService: TeamsListService,
     private media: ObservableMedia
   ) { }
 
   ngOnInit() {
-    // Set initial grid layout
     this.updateGrid();
-
     this.media.subscribe(change => {
       this.updateGrid();
-    });
-
-    this.teamsListService.getTeams().subscribe(res => {
-      this.teamData = res;
-      this.leagues = Object.keys(this.teamData);
-      this.leagues.forEach(league => {
-        this.leagueIds[league] = Object.keys(this.teamData[league]);
-      });
     });
   }
 

@@ -1,0 +1,30 @@
+@import '../../shared/styles/variables';
+
+:host {
+  padding: 0 $default-padding__thin;
+}
+.back-button {
+  position: absolute;
+  top: calc(#{$toolbar-height-lg} + #{$default-padding__thin});
+  left: $default-padding;
+  background-color: #FFF;
+  color: $america-blue;
+}
+
+.team-details {
+  &__summary {
+    width: 100%;
+    text-align: center;
+  }
+  &__sections {
+    .mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
+      flex-basis: 0;
+    }
+  
+    .mat-expansion-panel-header-description {
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 0;
+    }
+  }
+}
