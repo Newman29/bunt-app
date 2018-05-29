@@ -1,7 +1,7 @@
 <bunt-fancy-title>{{detail?.name}}</bunt-fancy-title>
 <div class="team-details__summary" *ngIf="detail">
   <div class="team-details__captain"><span class="team-details__summary-label">Captain</span> {{detail?.captain}}</div>
-  <div class="team-details__league"><span class="team-details__summary-label">League</span> {{detail?.league | titlecase}} League</div>
+  <div class="team-details__league"><span class="team-details__summary-label">League</span> {{detail?.league | titlecase}}</div>
   <div class="team-details__record"><span class="team-details__summary-label">Record</span> {{teamRecord?.wins}}-{{teamRecord?.losses}}-{{teamRecord?.ties}}</div>
   
 </div>
