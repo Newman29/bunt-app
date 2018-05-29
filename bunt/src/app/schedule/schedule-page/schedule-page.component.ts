@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChildren, AfterViewInit } from '@angular/core';
 import { ScheduleService } from '../../shared/services/schedule.service';
 import * as moment from 'moment-mini-ts';
+import 'rxjs/add/operator/map';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'bunt-schedule-page',
@@ -14,12 +16,15 @@ export class SchedulePageComponent implements OnInit, AfterViewInit {
   gameDates: any[];
 
   constructor(
-    private scheduleService: ScheduleService
+    private scheduleService: ScheduleService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    this.scheduleService.getSchedule().subscribe(res => {
-      this.schedule = res;
+    // Clear host hash because things can get confusing on this page if it's included
+    location.hash = '';
+    this.scheduleService.getSchedule().subscribe(schedule => {
+      this.schedule = schedule;
 
       // Group by games on the schedule by date
       this.scheduleByDate = this.schedule.reduce((games, game) => {
@@ -35,7 +40,6 @@ export class SchedulePageComponent implements OnInit, AfterViewInit {
         return games;
       }, {});
 
-      const currentDate = moment().format('YYYY-MM-DD');
       this.gameDates = Object.keys(this.scheduleByDate);
 
       // Using locale compare sorts date strings in order
@@ -48,6 +52,7 @@ export class SchedulePageComponent implements OnInit, AfterViewInit {
       // Using a copy of the reverse ordered gameDates, we can find
       // the next game date (only if we don't already have one)
       if (!this.scheduleService.currentDisplayDate) {
+        const currentDate = moment().format('YYYY-MM-DD');
         this.gameDates.slice().reverse().forEach(date => {
           const dateCmp = this.strip(date);
           const currCmp = this.strip(currentDate);
@@ -61,31 +66,27 @@ export class SchedulePageComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const currentHash = window.location.hash.substr(1);
+    // When navigating back to this page, we can immediately jumpToHash after things get rendered
+    this.jumpToHash(this.scheduleService.currentDisplayDate);
 
-    // If there's already a current hash specified, respect that and navigate there
-    if (currentHash.length) {
-      this.jumpToHash(this.scheduleService.currentDisplayDate);
-    } else {
-      // If there's no hash, fall back to the schedule service's current display date
+    // Listen for location hash changes
+    this.route.fragment.subscribe(frag => {
+      this.jumpToHash(frag);
+    });
+
+    // Subscribing here will wait until the dom notes get updated before jumping to the hash
+    // Otherwise, they won't exist yet.
+    this.games.changes.subscribe(change => {
       if (this.scheduleService.currentDisplayDate) {
         this.jumpToHash(this.scheduleService.currentDisplayDate);
       }
-    }
-
-    this.games.changes.subscribe(change => {
-      // Re-jump to hash when the collection of games changes
-      this.jumpToHash(this.scheduleService.currentDisplayDate);
     });
   }
 
   jumpToHash(hash: string) {
-    // Resetting it and navigating back to the hash forces the view to go to the hash no matter what
-    window.location.hash = '';
-    this.scheduleService.currentDisplayDate = hash;
-
-    if (hash) {
-      location.hash = '#' + hash;
+    const element = document.querySelector('#_' + hash);
+    if (element) {
+      element.scrollIntoView();
     }
   }
 
