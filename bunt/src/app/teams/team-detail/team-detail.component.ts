@@ -18,6 +18,7 @@ export class TeamDetailComponent implements OnInit {
   detail: any;
   roster: string[];
   teamRecord: any;
+  teams: any[];
 
   constructor(
     private teamsListService: TeamsListService,
@@ -35,6 +36,10 @@ export class TeamDetailComponent implements OnInit {
     this.route.params.skip(1).subscribe(params => {
       this.id = params.id;
       this.render(params.id);
+      this.snackbar.open(`Switching to ${this.teams[this.id].name}`, '', {
+        duration: 750,
+        verticalPosition: 'top'
+      });
     });
   }
 
@@ -54,11 +59,11 @@ export class TeamDetailComponent implements OnInit {
       const keys = Object.keys(res);
 
       // Flatten one layer deep to get a dictionary of all teams
-      const teams = keys.reduce((acc, key) => {
+      this.teams = keys.reduce((acc, key) => {
         return {...acc, ...res[key]};
       }, {});
 
-      this.detail = teams[id];
+      this.detail = this.teams[id];
 
       if (this.detail) {
         return this.teamsListService.getRostersForTeam(this.detail.documentName);
