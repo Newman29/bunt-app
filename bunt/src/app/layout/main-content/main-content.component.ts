@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, ViewChild } from '@angular/core';
+import { Router, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 
 @Component({
   selector: 'bunt-main-content',
@@ -7,8 +8,18 @@ import { Component, OnInit, Output, ViewChild } from '@angular/core';
 })
 export class MainContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        if (event.urlAfterRedirects.includes('/schedule')) {
+          return;
+        }
+        window.scrollTo(0, 0);
+      }
+    });
   }
 }
