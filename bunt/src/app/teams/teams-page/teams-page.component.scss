@@ -1,24 +1,13 @@
+@import '../../shared/styles/variables';
+
 bunt-team-card {
   display: block;
   height: 100%;
   width: 100%;
 }
 
-.fancy-title {
-  &__container {
-    width: 100vw;
-  }
-
-  &__banner {
-    margin: 24px;
-    padding: 16px 24px;
-    border-top: 1px solid #EEE;
-    border-bottom: 1px solid #EEE;
-  }
-
-  &__text {
-    margin: 0;
-  }
+.teams-in-league {
+  margin-bottom: $default-padding;
 }
 
 .league-title:not(:first-of-type) {

@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewChild, ViewChildren, QueryList } 
 import { TeamsListService } from '../../shared/services/teams-list.service';
 import { ObservableMedia } from '@angular/flex-layout';
 import { TeamElement } from './team-card.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'bunt-teams-page',
@@ -21,7 +22,8 @@ export class TeamsPageComponent implements OnInit, AfterViewInit {
 
   constructor(
     private teamsListService: TeamsListService,
-    private media: ObservableMedia
+    private media: ObservableMedia,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -43,6 +45,10 @@ export class TeamsPageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.updateGrid();
+  }
+
+  gotoDetails(id: string | number) {
+    this.router.navigateByUrl(`teams/${id}`);
   }
 
   private updateGrid() {
