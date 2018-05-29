@@ -6,7 +6,14 @@ import { TeamsPageComponent } from './teams-page/teams-page.component';
 import { TeamCardComponent } from './teams-page/team-card.component';
 import { TeamDetailComponent } from './team-detail/team-detail.component';
 import { TeamsListService } from '../shared/services/teams-list.service';
-import { MatGridListModule, MatIconModule, MatListModule, MatButtonModule, MatExpansionModule, MatTooltipModule } from '@angular/material';
+import {
+  MatGridListModule,
+  MatIconModule,
+  MatListModule,
+  MatButtonModule,
+  MatExpansionModule,
+  MatTooltipModule,
+  MatSnackBarModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BuntCommonModule } from '../shared/common/bunt-common.module';
 import { TeamScheduleComponent } from './team-schedule/team-schedule.component';
@@ -20,7 +27,8 @@ const MaterialModules = [
   MatListModule,
   MatButtonModule,
   MatExpansionModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

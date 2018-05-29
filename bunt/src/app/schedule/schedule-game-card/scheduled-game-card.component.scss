@@ -7,7 +7,18 @@
   border-bottom: 1px solid #DDD;
   padding: $default-padding 0 $default-padding 0;
   margin-bottom: $default-padding;
+  background-color: white;
 
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: initial;
+    }
+    &:active {
+      color: initial; 
+    }
+  }
   .team {
     text-align: center;
     padding: 0 $default-padding__thin;

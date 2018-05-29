@@ -1,7 +1,7 @@
 <div class="game">
   <div class="game__away-team team">
     <div class="team__label">away</div>
-    <div class="team__name">{{away}}</div>
+    <a [routerLink]="'/teams/' + awayId" class="team__name">{{away}}</a>
   </div>
   <div *ngIf="!final" class="game__time-location">
     <div class="game__time">{{time}}</div>
@@ -14,6 +14,6 @@
   <div class="game__result"></div>
   <div class="game__home-team team">
       <div class="team__label">home</div>
-      <div class="team__name">{{home}}</div>
+      <a [routerLink]="'/teams/' + homeId" class="team__name">{{home}}</a>
     </div>
 </div>

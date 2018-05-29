@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamsListService } from '../../shared/services/teams-list.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd } from '@angular/router';
 
 import { Observable } from 'rxjs/observable';
 import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/skip';
 import { StandingsService } from '../../shared/services/standings.service';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 
 @Component({
   selector: 'bunt-team-detail',
@@ -20,16 +22,34 @@ export class TeamDetailComponent implements OnInit {
   constructor(
     private teamsListService: TeamsListService,
     private standingsService: StandingsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private snackbar: MatSnackBar
   ) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
-    this.standingsService.getStandings().subscribe(standings => {
-      console.log(standings);
-      this.teamRecord = standings.filter(rec => +rec.id === +this.id)[0];
-      console.log(this.teamRecord);
+    this.render(this.id);
+
+    // Re-render this component when parameters change
+    // We're skipping the first one because we took care of that one already in initialization
+    this.route.params.skip(1).subscribe(params => {
+      this.id = params.id;
+      this.render(params.id);
     });
+  }
+
+  render(id) {
+    this.retreiveTeamDetails(id);
+    this.retreiveTeamRecord(id);
+  }
+
+  private retreiveTeamRecord(id) {
+    this.standingsService.getStandings().subscribe(standings => {
+      this.teamRecord = standings.filter(rec => +rec.id === +id)[0];
+    });
+  }
+
+  private retreiveTeamDetails(id) {
     this.teamsListService.getTeams().switchMap(res => {
       const keys = Object.keys(res);
 
@@ -38,7 +58,7 @@ export class TeamDetailComponent implements OnInit {
         return {...acc, ...res[key]};
       }, {});
 
-      this.detail = teams[this.id];
+      this.detail = teams[id];
 
       if (this.detail) {
         return this.teamsListService.getRostersForTeam(this.detail.documentName);
@@ -49,5 +69,4 @@ export class TeamDetailComponent implements OnInit {
       this.roster = roster;
     });
   }
-
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 import * as moment from 'moment-mini-ts';
 import { MatTableDataSource } from '@angular/material';
 
@@ -9,12 +9,15 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class ScheduledGameCardComponent implements OnInit, OnChanges {
   @Input() game;
+  @Input() displayDate = false;
 
   day: string;
   time: string;
   field: string;
   home: string;
+  homeId: string;
   away: string;
+  awayId: string;
   final: boolean;
   awayScore: number;
   homeScore: number;
@@ -28,7 +31,9 @@ export class ScheduledGameCardComponent implements OnInit, OnChanges {
     this.day = date.format('ddd, MMM D');
     this.time = date.format('h:mm A');
     this.home = this.game.home;
+    this.homeId = this.game.homeId;
     this.away = this.game.away;
+    this.awayId = this.game.awayId;
     this.field = this.game.field;
     this.final = this.game.final;
     this.awayScore = this.game.awayScore;
