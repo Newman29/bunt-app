@@ -16,6 +16,12 @@
     width: 100%;
     text-align: center;
   }
+  &__summary-label {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
   &__sections {
     .mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
       flex-basis: 0;
