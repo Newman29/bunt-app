@@ -18,6 +18,18 @@ mat-cell.positive {
   color: $status-success;
 }
 
+a {
+  color: initial;
+  text-decoration: none;
+
+  &:visited {
+    color: initial;
+  }
+  &:active {
+    color: initial;
+  }
+}
+
 // Column sizes
 .mat-column {
   &-name {

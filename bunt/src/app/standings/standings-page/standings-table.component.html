@@ -1,7 +1,9 @@
 <mat-table [dataSource]="dataSource" matSort>
   <ng-container matColumnDef="name">
     <mat-header-cell class="left" *matHeaderCellDef mat-sort-header>Team</mat-header-cell>
-    <mat-cell class="left" *matCellDef="let element">{{element.name}}</mat-cell>
+    <mat-cell class="left" *matCellDef="let element">
+      <a [routerLink]="'/teams/' + element.id">{{element.name}}</a>
+    </mat-cell>
   </ng-container>
   <ng-container matColumnDef="rank">
     <mat-header-cell class="right" *matHeaderCellDef mat-sort-header [arrowPosition]="'before'">Rank</mat-header-cell>

@@ -34,7 +34,6 @@ export class StandingsTableComponent implements OnInit, OnChanges {
     };
   }
   ngOnChanges() {
-    console.log(this.standingsData);
     if (this.standingsData) {
       this.dataSource.data = this.standingsData;
       this.sort.sort(<MatSortable>{
