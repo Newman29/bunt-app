@@ -7,7 +7,8 @@ import { firestore } from './index';
  */
 export async function duplicateCollection(collection: string, newCollectionName: string) {
   if (collection === newCollectionName) {
-    return console.log(`The new collection name must be different than the original.`);
+    console.log(`The new collection name must be different than the original.`);
+    return;
   }
 
   const batch = firestore.batch();
@@ -22,7 +23,8 @@ export async function duplicateCollection(collection: string, newCollectionName:
   })
 
   await batch.commit();
-  return console.log(`Successfully backed up collection '${collection}' (${docCount} documents) to '${newCollectionName}'.`);
+  console.log(`Successfully backed up collection '${collection}' (${docCount} documents) to '${newCollectionName}'.`);
+  return;
 }
 
 /**

@@ -12,7 +12,8 @@ export async function updateCollectionDocsWithObject(collectionRef: FirebaseFire
   });
 
   await batch.commit();
-  return console.log(`Successfully updated ${updateCount} documents in the ${collectionRef.path} collection.`);
+  console.log(`Successfully updated ${updateCount} documents in the ${collectionRef.path} collection.`);
+  return;
 }
 
 export async function updateScheduleAfterTeamNameChange(change, context) {
@@ -52,14 +53,16 @@ export async function updateScheduleAfterTeamNameChange(change, context) {
       });
 
       await batch.commit();
-      return console.log(`Successfully updated ${updatedGamesCount} games in the schedule by replacing all instances of ${oldName} with ${newName}.`)
+      console.log(`Successfully updated ${updatedGamesCount} games in the schedule by replacing all instances of ${oldName} with ${newName}.`)
+      return;
     } catch (err) {
       // Make a little better than this.
       console.log(`Failed to update games collection. Parameters: change ${change} and context ${context}. Error: ${err}`);
     }
   } else {
     // No name change, punt.
-    return console.log('Document update triggered but no name change is detected. Not updating schedule.');
+    console.log('Document update triggered but no name change is detected. Not updating schedule.');
+    return;
   }
 }
 
