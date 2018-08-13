@@ -19,6 +19,7 @@ export class ScheduledGameCardComponent implements OnInit, OnChanges {
   away: string;
   awayId: string;
   final: boolean;
+  postseason: boolean;
   awayScore: number;
   homeScore: number;
 
@@ -36,6 +37,7 @@ export class ScheduledGameCardComponent implements OnInit, OnChanges {
     this.awayId = this.game.awayId;
     this.field = this.game.field;
     this.final = this.game.final;
+    this.postseason = this.game.postseason;
     this.awayScore = this.game.awayScore;
     this.homeScore = this.game.homeScore;
   }
