@@ -1,6 +1,6 @@
 export const rosters = {
   '1': [
-    "Abe Chen"
+    "Abe Chen",
     "Alex McKelve",
     "Anita Cheun",
     "Elizabeth Schmid",
