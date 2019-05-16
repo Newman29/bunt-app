@@ -33,22 +33,24 @@ export const firestore = admin.firestore();
  * e.g. updateTeams({before: { id: 4, name: 'Green Monster'}, after: {id: 4, name: 'Caseydilla and the Salsa Verdes'} }, {params: { docId: 'Casey Turk'}})
  */
 export const updateTeams = functions.firestore.document('teams/{docId}').onUpdate(async (change, context) => {
-  return updateScheduleAfterTeamNameChange(change, context);
+    return updateScheduleAfterTeamNameChange(change, context);
 });
 
 /**
  * A nice HTTPS function that will duplicate a collection with a timestamp (will duplicated nested collections to the root)
  */
 export const backupCollection = functions.https.onRequest(async (req, res) => {
-  // Punt on any errors
-  if (typeof req.query.collection === 'undefined' || req.query.collection === '') {
-    console.log(`No collection name detected in parameters, please specify a collection to backup`);
-    return res.status(504).end();
-  }
+    // Punt on any errors
+    if (typeof req.query.collection === 'undefined' || req.query.collection === '') {
+        console.log(`No collection name detected in parameters, please specify a collection to backup`);
+        //return res.status(504).end();
+        return res.status(504);
+    }
 
-  const now = new Date(Date.now());
-  await duplicateCollection(req.query.collection, req.query.collection + '_' + now.toISOString() + '_backup');
-  return res.status(200).end();
+    const now = new Date(Date.now());
+    await duplicateCollection(req.query.collection, req.query.collection + '_' + now.toISOString() + '_backup');
+    //return res.status(200).end();
+    return res.status(200);
 });
 
 // export const clearScores = functions.https.onRequest(async (req, res) => {
@@ -103,20 +105,20 @@ export const backupCollection = functions.https.onRequest(async (req, res) => {
 
 // export const seedTeamRosters = functions.https.onRequest(async (req, res) => {
 //   const teamsRef = firestore.collection(TEAMS_COLLECTION);
-  
+
 //   const teams = await teamsRef.get();
 //   // First clear the rosters
-  
+
 //   teams.forEach(async (team) => {
 //     const batch = firestore.batch();
 //     // Initialize counters
 //     let writeCount = 0;
 //     let deleteCount = 0;
-    
+
 //     console.log(`Replacing roster for team: ${team.data().name}...`);
 //     const ref = firestore.collection(TEAMS_COLLECTION).doc(team.id).collection('roster');
 //     const teamRosterData = rosters[team.data().id]; // should get an array of names for the roster
-    
+
 //     // Delete team roster before replacing
 //     const existing = await ref.get();
 //     existing.forEach(doc => {
@@ -130,7 +132,7 @@ export const backupCollection = functions.https.onRequest(async (req, res) => {
 //       batch.set(teamsRef.doc(team.id).collection('roster').doc(), { name: name });
 //       writeCount++;
 //     })
-    
+
 //     await batch.commit();
 //     console.log(`Wrote ${writeCount} documents to roster collection for team: ${team.data().name}`);
 //   });
