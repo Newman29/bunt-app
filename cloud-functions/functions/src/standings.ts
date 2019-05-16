@@ -16,34 +16,37 @@ class TeamRecord {
   private tiesWith = [];
 
   /**
-   * 
+   *
    * @param id The id of the team
    * @param name The full name of the team
    * @param short The short abbrv. of the team name
    */
   constructor(
-    public id: string,
-    public name: string,
-    public short: string,
-    public league: string
+      public id: string,
+      public name: string,
+      public short: string,
+      public league: string
   ) {}
-  
+
   public get wins(): number {
     return this.winsAgainst.length;
   }
   public get leagueWins(): number {
+    // @ts-ignore
     return this.winsAgainst.filter(team => team.league === this.league).length;
   }
   public get losses(): number {
     return this.lossesTo.length;
   }
   public get leagueLosses(): number {
+    // @ts-ignore
     return this.lossesTo.filter(team => team.league === this.league).length;
   }
   public get ties(): number {
     return this.tiesWith.length;
   }
   public get leagueTies(): number {
+    // @ts-ignore
     return this.tiesWith.filter(team => team.league === this.league).length;
   }
   public get gamesPlayed(): number {
@@ -70,28 +73,34 @@ class TeamRecord {
     return this.runsScored - this.runsAllowed;
   }
   public beat(team: TeamRecord, runsScored: number, runsAllowed: number): void {
+    // @ts-ignore
     this.winsAgainst.push(team);
     this.runsScored += runsScored;
     this.runsAllowed += runsAllowed;
   }
   public lostTo(team: TeamRecord, runsScored: number, runsAllowed: number): void {
+    // @ts-ignore
     this.lossesTo.push(team);
     this.runsScored += runsScored;
     this.runsAllowed += runsAllowed;
   }
   public tiedWith(team: TeamRecord, runs: number): void {
+    // @ts-ignore
     this.tiesWith.push(team);
     this.runsScored += runs;
     this.runsAllowed += runs;
   }
   public hasWonAgainst(team: TeamRecord): boolean {
+    // @ts-ignore
     return team.id in this.winsAgainst.map(t => t.id) ? true : false;
   }
   public hasLostTo(team: TeamRecord): boolean {
-    return team.id in this.lossesTo.map(t => t.id) ? true : false;
+    // @ts-ignore
+    return team.id in this.lossesTo.map(t => t.id);
   }
   public hasTiedWith(team: TeamRecord): boolean {
-    return team.id in this.tiesWith.map(t => t.id) ? true : false;
+    // @ts-ignore
+    return team.id in this.tiesWith.map(t => t.id);
   }
   // TODO
   public hasTiebreakAgainst(team: TeamRecord): boolean {
@@ -135,16 +144,16 @@ export async function updateRecords() {
     records[key] = new TeamRecord(team.id, team.name, team.short, team.league);
     return records;
   }, {});
-  
+
   // 1. Iterate through each game of the schedule
   // 2. Pull out the games that have been completed
   const completedQuery = await firestore.collection(GAMES_COLLECTION)
-    .where('final', '==', true)
-    .where('postseason', '==', false) 
-    .get();
+      .where('final', '==', true)
+      .where('postseason', '==', false)
+      .get();
 
   const completedSchedule = completedQuery.docs.map(doc => doc.data());
-    
+
   // 3. Crunch W/L/T/PCT/RS/RA/DIFF for each team
   completedSchedule.forEach(game => {
     const awayRecord = teamRecords[game.awayId];
@@ -154,7 +163,7 @@ export async function updateRecords() {
 
     updateRecordByResult(awayScore, awayRecord, homeScore, homeRecord);
   })
-  
+
   // 4. Calculate ranking based on league
   calculateRankings(teamRecords);
 
@@ -180,7 +189,7 @@ export async function updateRecords() {
   // 6. Format and write to db
   console.log(`standings done`);
   return batch.commit();
-  
+
 }
 
 function writeRecord(batch: WriteBatch, teamRecord: TeamRecord, collection?: CollectionReference): void {
@@ -195,10 +204,10 @@ function calculateRankings(records: any) {
 }
 
 function updateRecordByResult(
-  awayScore: number,
-  away: TeamRecord,
-  homeScore: number,
-  home: TeamRecord
+    awayScore: number,
+    away: TeamRecord,
+    homeScore: number,
+    home: TeamRecord
 ) {
   if (homeScore === awayScore) {
     home.tiedWith(away, homeScore);

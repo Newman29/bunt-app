@@ -16,6 +16,7 @@ export async function updateCollectionDocsWithObject(collectionRef: FirebaseFire
   return;
 }
 
+// @ts-ignore
 export async function updateScheduleAfterTeamNameChange(change, context) {
   const batch = firestore.batch();
   const scheduleRef = firestore.collection(GAMES_COLLECTION);
